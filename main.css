@@ -4,3 +4,155 @@
     padding: 0%;
 }
 
+/*----------------------------------------------------*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0f2fe;
+}
+
+/*----------------------------------------------------*/
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff275;
+    height: 100px;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 5px;
+    padding: 8px 18px;
+    border: 2px solid black;
+    border-radius: 20px;
+    -webkit-text-stroke: 1px black;
+}
+
+nav a:hover{
+    background-color: black;
+    color: white;
+    -webkit-text-stroke: 0px;
+}
+
+/*--------------------------------------------------*/
+
+.footer{
+    background-color: #fff275;
+    margin-top: 40px;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.footer p{
+    text-align: center;
+    justify-items:center;
+    font-size: 14px;
+    position: absolute;
+    margin-top: 100px;
+    color: #333;
+}
+
+.footer img{
+    width: 30px;
+    height: 30px;
+}
+
+/*--------------------------------------------------*/
+
+#inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1px 1px;
+}
+
+#inicio img{
+    width: 100%;
+}
+
+/*----------------------------------------------------*/
+
+#elementos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon img{
+    height: 100px;
+    width: 100;    
+}
+
+.icon h3{
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+/*---------------------------------------------*/
+
+#produtos{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#subprodutos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+#subprodutos img{
+    width: 220px;
+    height: 350px;
+}
+
+/*-------------------------------------------------*/
+
+#maispedidos{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#submp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    
+}
+
+#submp img{
+    width: 220px;
+    height: 350px;
+}
