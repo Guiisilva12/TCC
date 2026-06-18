@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
+    <title>Fale Conosco — Meraki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(img/fundo.jpeg);
+            color: #000000;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFFAC3;
+            padding: 20px 40px;
+            border-bottom: 1px solid #EAEAEA;
+            height: 150px;
+            box-shadow: 5px 3px 5px rgba(59, 53, 53, 0.9);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header img {
+            height: 100px;
+            width: 130px;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            background-color: #FAFAFA;
+            border: 1px solid #EAEAEA;
+            border-radius: 30px;
+            padding: 40px;
+            gap: 20px;
+        }
+
+        .row-dupla {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #444444;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input,
+        textarea {
+            height: 45px;
+            border-radius: 12px;
+            border: 1px solid #CCCCCC;
+            padding: 10px 15px;
+            width: 100%;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #f06292;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .botao-enviar {
+            background-color: #f06292;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 40px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: center;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .botao-enviar:hover {
+            background-color: #e91e8c;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay.ativo {
+            display: flex;
+        }
+
+        .modal {
+            background-color: white;
+            border-radius: 25px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .modal h3 {
+            font-size: 22px;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+
+        .modal p {
+            font-size: 14px;
+            color: #444444;
+            background-color: #FFF5F8;
+            border-radius: 12px;
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #FFE4EE;
+        }
+
+        .modal p span {
+            font-weight: bold;
+            color: #e91e8c;
+            font-size: 30px;
+        }
+
+        .modal button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 35px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: center;
+            margin-top: 10px;
+        }
+
+        .modal button:hover {
+            background-color: #222222;
+        }
+
+        .footer {
+            background-color: #FFFAC3;
+            border-top: 1px solid #EAEAEA;
+            margin-top: 60px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.9);
+        }
+
+        .footer .icones {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .footer a img {
+            width: 40px;
+            height: 40px;
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            .row-dupla {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .info {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo_cliente.jpeg" alt="Logo">
+            <span class="logo-text">MERAKI</span>
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="Contatos.html">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Fale Conosco</h2>
+
+        <div class="info">
+            <div class="row-dupla">
+                <div class="campo">
+                    <label>Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome">
+                </div>
+                <div class="campo">
+                    <label>Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>E-mail do Cliente</label>
+                <input type="email" id="email" placeholder="seu@email.com">
+            </div>
+
+            <div class="campo">
+                <label>Assunto</label>
+                <input type="text" id="assunto" placeholder="Escreva o motivo do contato">
+            </div>
+
+            <div class="campo">
+                <label>Comentário</label>
+                <textarea id="comentario" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+
+            <button class="botao-enviar" onclick="enviarMensagem()">Enviar Mensagem</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <h3>Mensagem Enviada!</h3>
+            <p><span>Nome:</span> <span id="modal-nome"></span></p>
+            <p><span>Telefone:</span> <span id="modal-telefone"></span></p>
+            <p><span>E-mail:</span> <span id="modal-email"></span></p>
+            <p><span>Assunto:</span> <span id="modal-assunto"></span></p>
+            <p><span>Comentário:</span> <span id="modal-comentario"></span></p>
+            <button onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="icones">
+            <a href=""><img src="img/insta.png" alt="Instagram"></a>
+            <a href=""><img src="img/whatts.png" alt="WhatsApp"></a>
+            <a href=""><img src="img/li.png" alt="LinkedIn"></a>
+        </div>
+        <p>&copy; 2024 Meraki. Todos os direitos reservados. Design por Arial Inventado.</p>
+    </div>
+
+    <script>
+        function enviarMensagem() {
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const assunto = document.getElementById('assunto').value.trim();
+            const comentario = document.getElementById('comentario').value.trim();
+
+            if (!nome || !email || !comentario) {
+                alert('Por favor, preencha os campos obrigatórios (Nome, E-mail e Comentário).');
+                return;
+            }
+
+            document.getElementById('modal-nome').textContent = nome;
+            document.getElementById('modal-telefone').textContent = telefone || '—';
+            document.getElementById('modal-email').textContent = email;
+            document.getElementById('modal-assunto').textContent = assunto || '—';
+            document.getElementById('modal-comentario').textContent = comentario;
+
+            document.getElementById('overlay').classList.add('ativo');
+        }
+
+        function fecharModal() {
+            document.getElementById('overlay').classList.remove('ativo');
+            
+            document.getElementById('nome').value = '';
+            document.getElementById('telefone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('assunto').value = '';
+            document.getElementById('comentario').value = '';
+        }
+    </script>
+</body>
+
+</html>
