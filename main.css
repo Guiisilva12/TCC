@@ -8,7 +8,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e0f2fe;
+    background-image: url(imagens_index/fundo\ do\ site.png);
 }
 
 /*----------------------------------------------------*/
@@ -22,6 +22,7 @@ nav{
     height: 100px;
     border-radius: 5px;
     gap: 5px;
+    
 }
 
 nav a{
@@ -41,9 +42,14 @@ nav a:hover{
     -webkit-text-stroke: 0px;
 }
 
+nav img{
+    width: 80px;
+    height: 70px;
+}
+
 /*--------------------------------------------------*/
 
-.footer{
+.rodape{
     background-color: #fff275;
     margin-top: 40px;
     padding: 30px 20px;
@@ -55,7 +61,7 @@ nav a:hover{
     gap: 45px;
 }
 
-.footer p{
+.rodape p{
     text-align: center;
     justify-items:center;
     font-size: 14px;
@@ -64,9 +70,15 @@ nav a:hover{
     color: #333;
 }
 
-.footer img{
-    width: 30px;
-    height: 30px;
+.rodape img{
+    width: 100px;
+    height: 100px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #fff275;
 }
 
 /*--------------------------------------------------*/
@@ -133,6 +145,36 @@ nav a:hover{
 #subprodutos img{
     width: 220px;
     height: 350px;
+    border-radius: 10px;
+
+}
+
+.sub2prod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff275;
+    padding: 20px 20px;
+    border-radius: 10px;
+    
+
+}
+
+.sub2prod h3{
+    font-size: 30px;
+}
+
+.sub2prod button{
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.sub2prod p{
+    font-size: 15px;
+    color: #e0f2fe;
 }
 
 /*-------------------------------------------------*/
@@ -155,4 +197,32 @@ nav a:hover{
 #submp img{
     width: 220px;
     height: 350px;
+    border-radius: 10px;
 }
+
+.sub2mp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff275;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.sub2mp h3{
+    font-size: 30px;
+}
+
+.sub2mp button{
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.sub2mp p{
+    font-size: 15px;
+    color: #e0f2fe;
+}
+

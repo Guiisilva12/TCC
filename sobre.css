@@ -8,7 +8,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e0f2fe;
+    background-image: url(./imagens_index/fundo\ do\ site.png);
 }
 
 /*------------------------------------------------------*/
@@ -25,6 +25,7 @@ nav{
 }
 
 nav a{
+    display: flex;
     text-decoration: none;
     color: white;
     font-size: 30px;
@@ -41,9 +42,14 @@ nav a:hover{
     -webkit-text-stroke: 0px;
 }
 
+nav img{
+    width: 80px;
+    height: 70px;
+}
+
 /*----------------------------------------------------*/
 
-.footer{
+.rodape{
     background-color: #fff275;
     margin-top: 40px;
     padding: 30px 20px;
@@ -55,7 +61,7 @@ nav a:hover{
     gap: 45px;
 }
 
-.footer p{
+.rodape p{
     text-align: center;
     justify-items:center;
     font-size: 14px;
@@ -64,9 +70,15 @@ nav a:hover{
     color: #333;
 }
 
-.footer img{
-    width: 30px;
-    height: 30px;
+.rodape img{
+    width: 100px;
+    height: 100px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #fff275;
 }
 
 /*---------------------------------------------*/
@@ -115,6 +127,7 @@ nav a:hover{
 #subtrab img{
     width: 220px;
     height: 350px;
+    border-radius: 10px;
 }
 
 /*-------------------------------------------------*/
