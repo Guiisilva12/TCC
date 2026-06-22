@@ -240,3 +240,22 @@ header {
     color: #e0f2fe;
 }
 
+@media (max-width: 760px) {
+
+    body{
+        background-position: center;
+    }
+    .logo-container{
+        gap: 1vh;
+        padding: 2px;
+    }
+    nav{
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        font-size: 16px;
+    }
+
+
+}
+
