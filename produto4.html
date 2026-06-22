@@ -14,12 +14,10 @@
             font-family: Arial, sans-serif;
         }
 
-
         body {
             background-image: url(img/fundo.jpeg);
             color: #000000;
         }
-
 
         header {
             display: flex;
@@ -81,10 +79,14 @@
         .product-gallery {
             flex: 1;
             min-width: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .main-image {
             width: 100%;
+            max-width: 380px; /* Limita o tamanho máximo para combinar com a outra página */
             height: auto;
             border-radius: 15px;
             object-fit: cover;
@@ -356,10 +358,10 @@
             <span>MERAKI</span>
         </div>
         <nav>
-            <a href="./index.html">Início</a>
-            <a href="./produtos.html">Produtos</a>
-            <a href="./Contatos.html">Contatos</a>
-            <a href="./sobre.html">Sobre</a>
+            <a href="#">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#">Sobre Nós</a>
+            <a href="Contatos.html">Contato</a>
         </nav>
     </header>
 
@@ -375,7 +377,7 @@
                 <p class="description">Transforme momentos do dia em uma experiência de cura e criatividade. O kit
                     inclui tela de linho, pincéis profissionais, 24 tintas acrílicas vibrantes e um guia de técnicas
                     relaxantes. Ideal para iniciantes e para quem busca equilíbrio emocional através da arte.</p>
-                <div class="price">R$ 149,90</div>
+                <div class="price">R$ 169,90</div>
 
                 <div class="meta-row">
                     <div class="quantity">
@@ -409,7 +411,7 @@
                 <div class="related-card">
                     <a href="produto3.html"><img src="img/diario.jpg" alt="Diário do Autoconhecimento"></a>
                     <div class="title">Diário do Autoconhecimento</div>
-                    <div class="price">R$ 149,90</div>
+                    <div class="price">R$ 109,90</div>
                     <button class="btn-add">Carrinho</button>
                 </div>
 
@@ -423,7 +425,7 @@
                 <div class="related-card">
                     <a href="produto5.html"><img src="img/caixinha.jpg" alt="Livro de Músicas"></a>
                     <div class="title">Livro de Músicas</div>
-                    <div class="price">R$ 99,90</div>
+                    <div class="price">R$ 79,90</div>
                     <button class="btn-add">Carrinho</button>
                 </div>
 
