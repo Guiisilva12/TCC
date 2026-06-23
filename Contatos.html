@@ -7,39 +7,90 @@
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
     <title>Fale Conosco — Paula Evelise</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-        body { background-image: url(img/fundo.jpeg); color: #000000; }
+        body {
+            background-image: url(img/fundo.jpeg);
+            color: #000000;
+        }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #FFFAC3;
             padding: 20px 40px;
-            border-bottom: 1px solid #EAEAEA;
             height: 150px;
-            box-shadow: 5px 3px 5px rgba(59, 53, 53, 0.9);
+            background-color: #FFFAC3;
+            box-shadow: 15px 9px 7px rgba(59, 53, 53, 0.9);
+            border-bottom: 1px solid #FFFFFF;
         }
 
-        .logo-container { display: flex; align-items: center; gap: 10px; }
-        header img { height: 100px; width: 130px; }
-        .logo-text { font-size: 14px; font-weight: bold; letter-spacing: 1px; }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        nav { display: flex; gap: 25px; }
+        header img {
+            height: 100px;
+            width: 120px;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
 
         header nav a {
             text-decoration: none;
             color: #333333;
             font-size: 24px;
             font-weight: 500;
+            padding: 0;
+            border: none;
+            border-radius: 0;
         }
 
-        header nav a:hover { color: #000000; font-weight: bold; }
+        header nav a:hover {
+            background-color: transparent;
+            color: #000000;
+            font-weight: bold;
+        }
 
-        .container { max-width: 850px; margin: 50px auto; padding: 0 20px; }
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        h2 { text-align: center; margin-bottom: 30px; font-size: 36px; font-weight: bold; }
+        .container {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: bold;
+        }
 
         .info {
             display: flex;
@@ -51,9 +102,17 @@
             gap: 20px;
         }
 
-        .row-dupla { display: flex; gap: 20px; width: 100%; }
+        .row-dupla {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
 
-        .campo { display: flex; flex-direction: column; width: 100%; }
+        .campo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
 
         label {
             font-size: 13px;
@@ -64,7 +123,8 @@
             letter-spacing: 0.5px;
         }
 
-        input, textarea {
+        input,
+        textarea {
             height: 45px;
             border-radius: 12px;
             border: 1px solid #CCCCCC;
@@ -75,9 +135,15 @@
             transition: border-color 0.2s;
         }
 
-        input:focus, textarea:focus { border-color: #f06292; }
+        input:focus,
+        textarea:focus {
+            border-color: #f06292;
+        }
 
-        textarea { height: 150px; resize: vertical; }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
 
         .botao-enviar {
             background-color: #f06292;
@@ -93,21 +159,26 @@
             transition: background-color 0.2s;
         }
 
-        .botao-enviar:hover { background-color: #e91e8c; }
+        .botao-enviar:hover {
+            background-color: #e91e8c;
+        }
 
-        /* Modal */
         .overlay {
             display: none;
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
             z-index: 999;
             justify-content: center;
             align-items: center;
         }
 
-        .overlay.ativo { display: flex; }
+        .overlay.ativo {
+            display: flex;
+        }
 
         .modal {
             background-color: white;
@@ -119,10 +190,14 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .modal h3 { font-size: 22px; color: #000000; margin-bottom: 5px; }
+        .modal h3 {
+            font-size: 22px;
+            color: #000000;
+            margin-bottom: 5px;
+        }
 
         .modal p {
             font-size: 14px;
@@ -134,7 +209,11 @@
             border: 1px solid #FFE4EE;
         }
 
-        .modal p span { font-weight: bold; color: #e91e8c; font-size: 30px; }
+        .modal p span {
+            font-weight: bold;
+            color: #e91e8c;
+            font-size: 30px;
+        }
 
         .modal button {
             background-color: #000000;
@@ -149,9 +228,10 @@
             margin-top: 10px;
         }
 
-        .modal button:hover { background-color: #222222; }
+        .modal button:hover {
+            background-color: #222222;
+        }
 
-        /* Footer */
         .footer {
             background-color: #FFFAC3;
             border-top: 1px solid #EAEAEA;
@@ -164,13 +244,28 @@
             box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.9);
         }
 
-        .footer .icones { display: flex; gap: 30px; }
-        .footer p { font-size: 12px; color: #999999; text-align: center; }
-        .footer a img { width: 40px; height: 40px; opacity: 0.7; }
-        .footer a:hover img { opacity: 1; }
+        .footer .icones {
+            display: flex;
+            gap: 30px;
+        }
 
-        /* ── RESPONSIVO ── */
-        @media (max-width: 768px) {
+        .footer p {
+            font-size: 12px;
+            color: #999999;
+            text-align: center;
+        }
+
+        .footer a img {
+            width: 40px;
+            height: 40px;
+            opacity: 0.7;
+        }
+
+        .footer a:hover img {
+            opacity: 1;
+        }
+
+        @media (max-width: 610px) {
             header {
                 flex-direction: column;
                 height: auto;
@@ -178,27 +273,66 @@
                 gap: 12px;
             }
 
-            nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            nav a { font-size: 16px; }
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
-            .container { margin: 30px auto; }
+            nav a {
+                font-size: 16px;
+            }
 
-            h2 { font-size: 26px; margin-bottom: 20px; }
+            .container {
+                margin: 30px auto;
+            }
 
-            .row-dupla { flex-direction: column; gap: 15px; }
+            h2 {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
 
-            .info { padding: 20px 16px; gap: 15px; border-radius: 20px; }
+            .row-dupla {
+                flex-direction: column;
+                gap: 15px;
+            }
 
-            input, textarea { font-size: 13px; }
+            .info {
+                padding: 20px 16px;
+                gap: 15px;
+                border-radius: 20px;
+            }
 
-            .botao-enviar { width: 100%; padding: 12px; }
+            input,
+            textarea {
+                font-size: 13px;
+            }
 
-            .modal { padding: 25px 20px; }
-            .modal h3 { font-size: 18px; }
-            .modal p span { font-size: 20px; }
+            .botao-enviar {
+                width: 100%;
+                padding: 12px;
+            }
 
-            .footer { padding: 25px 15px; gap: 15px; }
-            .footer .icones { gap: 20px; }
+            .modal {
+                padding: 25px 20px;
+            }
+
+            .modal h3 {
+                font-size: 18px;
+            }
+
+            .modal p span {
+                font-size: 20px;
+            }
+
+            .footer {
+                padding: 25px 15px;
+                gap: 15px;
+            }
+
+            .footer .icones {
+                gap: 20px;
+            }
         }
     </style>
 </head>
@@ -266,9 +400,11 @@
 
     <div class="footer">
         <div class="icones">
-            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img
+                    src="img/insta.png" alt="Instagram"></a>
             <a href="" target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw" target="_blank"><img src="img/li.png" alt="YouTube"></a>
+            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw" target="_blank"><img src="img/li.png"
+                    alt="YouTube"></a>
         </div>
         <p>&copy; 2024 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
     </div>
@@ -304,6 +440,10 @@
             document.getElementById('comentario').value = '';
         }
     </script>
+     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+     <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+     </script>
 </body>
 
 </html>
