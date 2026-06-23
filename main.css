@@ -240,22 +240,104 @@ header {
     color: #e0f2fe;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 640px) {
 
     body{
         background-position: center;
     }
+
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
     .logo-container{
         gap: 1vh;
-        padding: 2px;
+        padding: 1px;
+        flex-grow: 1;
+        justify-content: center;
+
+        span{
+        font-size: 18px;
+        display: flex;
+        }
     }
     nav{
         flex-wrap: wrap;
-        align-items: center;
+        justify-content: space-between;
         flex-direction: row;
-        font-size: 16px;
+        font-size: 5px;
+
+    }
+}
+
+@media (max-width: 408px) {
+    header{
+        height: fit-content;
     }
 
+    .logo-container{
+        gap: 1vh;
+        padding: 1px;
+        flex-grow: 1;
+        justify-content: center;
 
+        span{
+            font-size: 15px;
+            display: flex;
+        }
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
+        padding: 2px;
+        gap: 10px;
+
+        a{
+            height: 20px;
+            display: flex;  
+        }
+    }
 }
+
+@media (max-width: 365px) {
+    header{
+        height: fit-content;
+    }
+
+    .logo-container{
+        gap: 1vh;
+        padding: 1px;
+        flex-grow: 1;
+        justify-content: center;
+
+        span{
+            font-size: 14px;
+            display: flex;
+        }
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
+        padding: 1px;
+        gap: 7px;
+
+        a{
+            font-size: 15px;
+            display: flex;
+        }
+    }
+}
+
+
 
