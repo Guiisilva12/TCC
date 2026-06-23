@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
     <title>Paula Evelise — Arte & Terapia</title>
     <style>
-         * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -47,10 +47,7 @@
             letter-spacing: 1px;
         }
 
-        nav {
-            display: flex;
-            gap: 25px;
-        }
+        nav { display: flex; gap: 25px; }
 
         header nav a {
             text-decoration: none;
@@ -60,7 +57,6 @@
             padding: 0;
             border: none;
             border-radius: 0;
-            -webkit-text-stroke: 0px;
         }
 
         header nav a:hover {
@@ -69,21 +65,13 @@
             font-weight: bold;
         }
 
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 18px;
-            cursor: pointer;
-            color: #333333;
-        }
-
         button {
             background-color: transparent;
             border: none;
             cursor: pointer;
         }
 
+        /* ── CARROSSEL ── */
         .carrossel {
             display: flex;
             align-items: center;
@@ -120,11 +108,9 @@
             transition: opacity 0.2s;
         }
 
-        .carrossel button:hover img {
-            opacity: 1;
-        }
+        .carrossel button:hover img { opacity: 1; }
 
-
+        /* ── PRODUTOS ── */
         h2.section-title {
             text-align: center;
             font-size: 22px;
@@ -185,7 +171,7 @@
             justify-content: center;
         }
 
-        .card-actions a, 
+        .card-actions a,
         .card-actions button {
             background-color: #f06292;
             color: white;
@@ -201,10 +187,8 @@
             text-align: center;
         }
 
-        .card-actions a:hover, 
-        .card-actions button:hover {
-            background-color: #e91e8c;
-        }
+        .card-actions a:hover,
+        .card-actions button:hover { background-color: #e91e8c; }
 
         .nenhum-resultado {
             text-align: center;
@@ -213,7 +197,7 @@
             display: none;
         }
 
-
+        /* ── FOOTER ── */
         .footer {
             background-color: #FFFAC3;
             border-top: 1px solid #EAEAEA;
@@ -226,15 +210,8 @@
             gap: 20px;
         }
 
-        .footer .icones {
-            display: flex;
-            gap: 30px;
-        }
-
-        .footer p {
-            font-size: 12px;
-            color: #999999;
-        }
+        .footer .icones { display: flex; gap: 30px; }
+        .footer p { font-size: 12px; color: #999999; text-align: center; }
 
         .footer a img {
             width: 40px;
@@ -243,8 +220,58 @@
             transition: opacity 0.2s;
         }
 
-        .footer a:hover img {
-            opacity: 1;
+        .footer a:hover img { opacity: 1; }
+
+        /* ── RESPONSIVO ── */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 12px;
+            }
+
+            nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            nav a { font-size: 16px; }
+
+            .carrossel { margin-top: 20px; margin-bottom: 20px; }
+
+            .carrossel-wrapper {
+                width: calc(100vw - 80px);
+                margin: 0 10px;
+            }
+
+            .carrossel-track img {
+                min-width: calc(100vw - 80px);
+                height: 180px;
+            }
+
+            .carrossel button img { width: 20px; height: 20px; }
+
+            h2.section-title { font-size: 18px; margin: 25px 0 15px 0; }
+
+            .linha { gap: 12px; padding: 10px 12px; }
+
+            .card {
+                width: calc(50% - 6px);
+                padding: 12px;
+                gap: 8px;
+            }
+
+            .card img { width: 100%; height: 110px; }
+
+            .card p.nome-produto { font-size: 11px; min-height: 28px; }
+
+            .card-actions { gap: 5px; }
+            .card-actions a,
+            .card-actions button { font-size: 11px; padding: 5px 8px; }
+
+            .footer { padding: 25px 15px; gap: 15px; }
+            .footer .icones { gap: 20px; }
+        }
+
+        @media (max-width: 400px) {
+            .card { width: 100%; }
         }
     </style>
 </head>
@@ -285,7 +312,7 @@
             <img src="img/livro.jpg" alt="Produto 1">
             <p class="nome-produto">Livro de Terapia</p>
             <div class="card-actions">
-                <a href="produto1.html" target="_blank">Veja mais</a>
+                <a href="produto1.html">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -293,7 +320,7 @@
             <img src="img/Kit.jpg" alt="Produto 2">
             <p class="nome-produto">Kit básico de Arte de Terapia</p>
             <div class="card-actions">
-                <a href="produto2.html" target="_blank">Veja mais</a>
+                <a href="produto2.html">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -301,7 +328,7 @@
             <img src="img/diario.jpg" alt="Produto 3">
             <p class="nome-produto">Diário do Autoconhecimento</p>
             <div class="card-actions">
-                <a href="produto3.html" target="_blank">Veja mais</a>
+                <a href="produto3.html">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -312,7 +339,7 @@
             <img src="img/Kit2.jpg" alt="Produto 4">
             <p class="nome-produto">Kit Artístico de Terapia</p>
             <div class="card-actions">
-                <a href="produto4.html" target="_blank">Veja mais</a>
+                <a href="produto4.html">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -320,7 +347,7 @@
             <img src="img/caixinha.jpg" alt="Produto 5">
             <p class="nome-produto">Livro de Músicas</p>
             <div class="card-actions">
-                <a href="produto5.html" target="_blank">Veja mais</a>
+                <a href="produto5.html">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -332,7 +359,7 @@
         <div class="icones">
             <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
             <a href="" target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw?fbclid=PAb21jcASmHBhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadO2gdKPivZzkQvcylAHbenTMVlVBev53xctaPs1BivFKf5j4a5mt0NcFr6Dg_aem_7Da9WjiU6zzyrXYJfn-gvg" target="_blank"><img src="img/li.png" alt="youtube"></a>
+            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw?fbclid=PAb21jcASmHBhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadO2gdKPivZzkQvcylAHbenTMVlVBev53xctaPs1BivFKf5j4a5mt0NcFr6Dg_aem_7Da9WjiU6zzyrXYJfn-gvg" target="_blank"><img src="img/li.png" alt="YouTube"></a>
         </div>
         <p>&copy; 2024 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
     </div>
@@ -344,11 +371,11 @@
 
         function mover(direcao) {
             atual = (atual + direcao + total) % total;
-            track.style.transform = `translateX(-${atual * 550}px)`;
+            const largura = document.querySelector('.carrossel-wrapper').offsetWidth;
+            track.style.transform = `translateX(-${atual * largura}px)`;
         }
 
-
-        setInterval(() => mover(10), 10000);
+        setInterval(() => mover(1), 4000);
     </script>
 </body>
 
