@@ -47,7 +47,10 @@
             letter-spacing: 1px;
         }
 
-        nav { display: flex; gap: 25px; }
+        nav {
+            display: flex;
+            gap: 25px;
+        }
 
         header nav a {
             text-decoration: none;
@@ -86,7 +89,7 @@
             border-radius: 15px;
             border: solid 1px #EAEAEA;
             margin: 0 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .carrossel-track {
@@ -108,7 +111,9 @@
             transition: opacity 0.2s;
         }
 
-        .carrossel button:hover img { opacity: 1; }
+        .carrossel button:hover img {
+            opacity: 1;
+        }
 
         /* ── PRODUTOS ── */
         h2.section-title {
@@ -137,13 +142,13 @@
             flex-direction: column;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
         }
 
         .card img {
@@ -188,7 +193,9 @@
         }
 
         .card-actions a:hover,
-        .card-actions button:hover { background-color: #e91e8c; }
+        .card-actions button:hover {
+            background-color: #e91e8c;
+        }
 
         .nenhum-resultado {
             text-align: center;
@@ -210,8 +217,16 @@
             gap: 20px;
         }
 
-        .footer .icones { display: flex; gap: 30px; }
-        .footer p { font-size: 12px; color: #999999; text-align: center; }
+        .footer .icones {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #999999;
+            text-align: center;
+        }
 
         .footer a img {
             width: 40px;
@@ -220,7 +235,9 @@
             transition: opacity 0.2s;
         }
 
-        .footer a:hover img { opacity: 1; }
+        .footer a:hover img {
+            opacity: 1;
+        }
 
         /* ── RESPONSIVO ── */
         @media (max-width: 768px) {
@@ -231,10 +248,20 @@
                 gap: 12px;
             }
 
-            nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            nav a { font-size: 16px; }
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
-            .carrossel { margin-top: 20px; margin-bottom: 20px; }
+            nav a {
+                font-size: 16px;
+            }
+
+            .carrossel {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
 
             .carrossel-wrapper {
                 width: calc(100vw - 80px);
@@ -246,32 +273,67 @@
                 height: 180px;
             }
 
-            .carrossel button img { width: 20px; height: 20px; }
+            .carrossel button img {
+                width: 20px;
+                height: 20px;
+            }
 
-            h2.section-title { font-size: 18px; margin: 25px 0 15px 0; }
+            h2.section-title {
+                font-size: 18px;
+                margin: 25px 0 15px 0;
+            }
 
-            .linha { gap: 12px; padding: 10px 12px; }
+            .linha {
+                gap: 12px;
+                padding: 10px 12px;
+            }
 
             .card {
                 width: calc(50% - 6px);
+                /* Exibe 2 produtos por linha */
                 padding: 12px;
                 gap: 8px;
             }
 
-            .card img { width: 100%; height: 110px; }
+            .card img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+                /* Força a imagem a ser sempre um quadrado perfeito */
+            }
 
-            .card p.nome-produto { font-size: 11px; min-height: 28px; }
+            .card p.nome-produto {
+                font-size: 11px;
+                min-height: 28px;
+            }
 
-            .card-actions { gap: 5px; }
+            .card-actions {
+                gap: 5px;
+            }
+
             .card-actions a,
-            .card-actions button { font-size: 11px; padding: 5px 8px; }
+            .card-actions button {
+                font-size: 11px;
+                padding: 5px 8px;
+            }
 
-            .footer { padding: 25px 15px; gap: 15px; }
-            .footer .icones { gap: 20px; }
+            .footer {
+                padding: 25px 15px;
+                gap: 15px;
+            }
+
+            .footer .icones {
+                gap: 20px;
+            }
         }
 
-        @media (max-width: 400px) {
-            .card { width: 100%; }
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+                /* Em telas muito pequenas, exibe 1 produto inteiro por linha */
+                max-width: 280px;
+                /* Evita que o card fique gigante para os lados */
+            }
         }
     </style>
 </head>
@@ -312,7 +374,7 @@
             <img src="img/livro.jpg" alt="Produto 1">
             <p class="nome-produto">Livro de Terapia</p>
             <div class="card-actions">
-                <a href="produto1.html">Veja mais</a>
+                <a href="produto1.html" target="_blank">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -320,7 +382,7 @@
             <img src="img/Kit.jpg" alt="Produto 2">
             <p class="nome-produto">Kit básico de Arte de Terapia</p>
             <div class="card-actions">
-                <a href="produto2.html">Veja mais</a>
+                <a href="produto2.html" target="_blank">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -328,7 +390,7 @@
             <img src="img/diario.jpg" alt="Produto 3">
             <p class="nome-produto">Diário do Autoconhecimento</p>
             <div class="card-actions">
-                <a href="produto3.html">Veja mais</a>
+                <a href="produto3.html" target="_blank">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -339,7 +401,7 @@
             <img src="img/Kit2.jpg" alt="Produto 4">
             <p class="nome-produto">Kit Artístico de Terapia</p>
             <div class="card-actions">
-                <a href="produto4.html">Veja mais</a>
+                <a href="produto4.html" target="_blank">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -347,7 +409,7 @@
             <img src="img/caixinha.jpg" alt="Produto 5">
             <p class="nome-produto">Livro de Músicas</p>
             <div class="card-actions">
-                <a href="produto5.html">Veja mais</a>
+                <a href="produto5.html" target="_blank">Veja mais</a>
                 <button>Carrinho</button>
             </div>
         </div>
@@ -357,9 +419,11 @@
 
     <div class="footer">
         <div class="icones">
-            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img
+                    src="img/insta.png" alt="Instagram"></a>
             <a href="" target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw?fbclid=PAb21jcASmHBhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadO2gdKPivZzkQvcylAHbenTMVlVBev53xctaPs1BivFKf5j4a5mt0NcFr6Dg_aem_7Da9WjiU6zzyrXYJfn-gvg" target="_blank"><img src="img/li.png" alt="YouTube"></a>
+            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw?fbclid=PAb21jcASmHBhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadO2gdKPivZzkQvcylAHbenTMVlVBev53xctaPs1BivFKf5j4a5mt0NcFr6Dg_aem_7Da9WjiU6zzyrXYJfn-gvg"
+                target="_blank"><img src="img/li.png" alt="YouTube"></a>
         </div>
         <p>&copy; 2024 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
     </div>
