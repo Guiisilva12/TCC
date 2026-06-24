@@ -11,61 +11,23 @@ body{
     background-image: url(imagens_index/fundo\ do\ site.png);
 }
 
-/*----------------------------------------------------*/
+/*--------------------------------------------------*/
 
-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #FFFAC3;
-            padding: 20px 40px;
-            border-bottom: 1px solid #EAEAEA;
-            height: 150px;
-            box-shadow: 5px 3px 5px rgba(59, 53, 53, 0.9);
-        }
+#menu{
+    display: flex;
+    width: 100vw;   
+    background-color: #FFFAC3 !important;
+}
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+#botao{
+    background-color: #e0f2fe; 
+}
 
-        header img {
-            height: 100px;
-            width: 130px;
-        }
+#links{
+    color: #333;
+}
 
-        .logo-text {
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
 
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        header nav a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        header nav a:hover {
-            color: #000000;
-            font-weight: bold;
-        }
-
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 18px;
-            cursor: pointer;
-            color: #333333;
-        }
 /*--------------------------------------------------*/
 
 .footer {
@@ -273,6 +235,31 @@ header {
         font-size: 5px;
 
     }
+
+    #maispedidos{
+        .sub2mp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .sub2mp img{
+            height: 200px;
+            width: 140px;
+        }
+
+        .sub2mp h3{
+            font-size: 20px;
+        }
+        .sub2mp button {
+            width: 60px;
+            height: 40px;
+        }
+    }
+
 }
 
 @media (max-width: 408px) {
@@ -339,5 +326,34 @@ header {
     }
 }
 
+@media (max-width: 320px){
+    header{
+        height: fit-content;
+    }
 
+    .logo-container{
+        gap: 1vh;
+        padding: 1px;
+        flex-grow: 1;
+        justify-content: center;
+
+        span{
+            font-size: 14px;
+            display: flex;
+        }
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
+        
+
+        a{
+            font-size: 10px;
+            display: flex;
+        }
+    }
+}
 

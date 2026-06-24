@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
     <title>Diário do Autoconhecimento - Meraki</title>
     <style>
         * {
@@ -19,41 +20,21 @@
             color: #000000;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            height: 150px;
-            background-color: #FFFAC3;
-            box-shadow: 15px 9px 7px rgba(59, 53, 53, 0.9);
-            border-bottom: 1px solid #EAEAEA;
-        }
+        #menu{
+    display: flex;
+    width: 100vw;   
+    background-color: #FFFAC3 !important;
+}
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+#botao{
+    background-color: #e0f2fe; 
+}
 
-        .logo-container img { height: 100px; width: 120px; }
+#links{
+    color: #333;
+}
 
-        .logo-container span {
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
 
-        nav { display: flex; gap: 25px; }
-
-        nav a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        nav a:hover { color: #000000; }
 
         .container {
             max-width: 1100px;
@@ -367,16 +348,33 @@
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="img/logo_cliente.jpeg" alt="Logo Meraki">
-            <span>MERAKI</span>
-        </div>
-        <nav>
-            <a href="#">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="#">Sobre Nós</a>
-            <a href="Contatos.html">Contato</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./imagens_index/logoCliente.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Paula Evelise
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html" id="links">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <div class="container">
@@ -547,6 +545,7 @@
             document.getElementById(idAba).classList.add('active');
         }
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>
