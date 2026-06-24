@@ -42,7 +42,6 @@
             cursor: pointer;
         }
 
-        /* ── CARROSSEL ── */
         .carrossel {
             display: flex;
             align-items: center;
@@ -83,7 +82,6 @@
             opacity: 1;
         }
 
-        /* ── PRODUTOS ── */
         h2.section-title {
             text-align: center;
             font-size: 22px;
@@ -172,7 +170,6 @@
             display: none;
         }
 
-        /* ── FOOTER ── */
         .footer {
             background-color: #FFFAC3;
             border-top: 1px solid #EAEAEA;
@@ -207,7 +204,6 @@
             opacity: 1;
         }
 
-        /* ── RESPONSIVO ── */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -258,7 +254,6 @@
 
             .card {
                 width: calc(50% - 6px);
-                /* Exibe 2 produtos por linha */
                 padding: 12px;
                 gap: 8px;
             }
@@ -267,7 +262,6 @@
                 width: 100%;
                 height: auto;
                 aspect-ratio: 1 / 1;
-                /* Força a imagem a ser sempre um quadrado perfeito */
             }
 
             .card p.nome-produto {
@@ -298,9 +292,7 @@
         @media (max-width: 480px) {
             .card {
                 width: 100%;
-                /* Em telas muito pequenas, exibe 1 produto inteiro por linha */
                 max-width: 280px;
-                /* Evita que o card fique gigante para os lados */
             }
         }
     </style>
@@ -360,7 +352,7 @@
             <p class="nome-produto">Livro de Terapia</p>
             <div class="card-actions">
                 <a href="produto1.html" target="_blank">Veja mais</a>
-                <button>Carrinho</button>
+                <a href="#" target="_blank">Comprar</a>
             </div>
         </div>
         <div class="card">
@@ -368,7 +360,7 @@
             <p class="nome-produto">Kit básico de Arte de Terapia</p>
             <div class="card-actions">
                 <a href="produto2.html" target="_blank">Veja mais</a>
-                <button>Carrinho</button>
+                <a href="#" target="_blank">Comprar</a>
             </div>
         </div>
         <div class="card">
@@ -376,7 +368,7 @@
             <p class="nome-produto">Diário do Autoconhecimento</p>
             <div class="card-actions">
                 <a href="produto3.html" target="_blank">Veja mais</a>
-                <button>Carrinho</button>
+                <a href="#" target="_blank">Comprar</a>
             </div>
         </div>
     </div>
@@ -387,7 +379,7 @@
             <p class="nome-produto">Kit Artístico de Terapia</p>
             <div class="card-actions">
                 <a href="produto4.html" target="_blank">Veja mais</a>
-                <button>Carrinho</button>
+                <a href="#" target="_blank">Comprar</a>
             </div>
         </div>
         <div class="card">
@@ -395,7 +387,7 @@
             <p class="nome-produto">Livro de Músicas</p>
             <div class="card-actions">
                 <a href="produto5.html" target="_blank">Veja mais</a>
-                <button>Carrinho</button>
+                <a href="#" target="_blank">Comprar</a>
             </div>
         </div>
     </div>
@@ -413,6 +405,13 @@
         <p>&copy; 2024 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
     </div>
 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
     <script>
         let atual = 0;
         const total = 5;
@@ -426,7 +425,14 @@
 
         setInterval(() => mover(1), 4000);
     </script>
+<<<<<<< HEAD
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+=======
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+>>>>>>> 9ee7bf2a9346d8666487f7d777ec2e79e9f06adb
 </body>
 
 </html>

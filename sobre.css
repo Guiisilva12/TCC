@@ -1,14 +1,8 @@
-*{
-    box-sizing: border-box;
-    padding: 0%;
-    margin: 0%;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-/*-----------------------------------------------------*/
-
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(./imagens_index/fundo\ do\ site.png);
+    background-image: url(imagens_index/fundo\ do\ site.png);
 }
 
 /*------------------------------------------------------*/
@@ -31,100 +25,100 @@ body{
 
 /*----------------------------------------------------*/
 
+/* ── FOOTER ── */
 .footer {
-            background-color: #FFFAC3;
-            border-top: 1px solid #EAEAEA;
-            margin-top: 60px;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.9);
-        }
-
-        .footer .icones {
-            display: flex;
-            gap: 30px;
-        }
-
-        .footer p {
-            font-size: 12px;
-            color: #999999;
-        }
-
-        .footer a img {
-            width: 40px;
-            height: 40px;
-            opacity: 0.7;
-        }
-/*---------------------------------------------*/
-
-#eu{
+    margin-top: 50px;
+    padding: 30px;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#subEu{
+    background-color: #FFFAC3;
+    border-top: 1px solid #EAEAEA;
+    box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.9);
     display: flex;
-    justify-content: center;  
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
+    gap: 15px;
 }
 
-#subEu img{
-    border-radius: 50%;
-    width: 325px;
-    height: 325px;
-}
-
-#subEu p{
-    text-align: justify;
-    font-size: 20px;
-}
-
-/*------------------------------------------------*/
-
-#trab{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#subtrab{
+.icones {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 2rem;
+    justify-content: center;
+    gap: 20px;
 }
 
-#subtrab img{
-    width: 220px;
-    height: 350px;
-    border-radius: 10px;
+.icones img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
 }
 
-/*-------------------------------------------------*/
+.icones a:hover img { opacity: 1; }
 
-#forma{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+.footer p { font-size: 12px; color: #999999; }
 
-#subforma{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 2rem;
-}
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 12px;
+    }
 
-#subforma img{
-    width: 300px;
-    height: 300px;    
+    nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    nav a { font-size: 16px; }
+
+    #eu {
+        margin: 20px 15px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    #subEu {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #eu img {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    #eu p { min-width: unset; font-size: 15px; }
+
+    #trab {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .subtrab {
+        width: 100%;
+        max-width: 340px;
+        padding: 15px;
+    }
+
+    .subtrab img { width: 100%; }
+
+    #forma { margin: 25px auto; padding: 0 15px; }
+
+    #subforma {
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        gap: 0;
+    }
+
+    #subforma p { font-size: 14px; line-height: 1.7; }
+
+    .forma-texto-container {
+        width: 95%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .forma-texto-container p { font-size: 14px; }
+
+    .footer { padding: 20px 15px; }
+    .icones { gap: 15px; }
 }

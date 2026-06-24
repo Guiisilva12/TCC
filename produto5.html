@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
     <title>Caixinha de Música - Meraki</title>
     <style>
-        * {
+    * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -34,6 +34,11 @@
     color: #333;
 }
 
+        .logo-container span {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
         .container {
             max-width: 1100px;
@@ -171,7 +176,6 @@
             background-color: #e91e8c;
         }
 
-        /* ── TABS ── */
         .tabs {
             display: flex;
             gap: 20px;
@@ -198,7 +202,6 @@
             border-bottom: 2px solid #f06292;
         }
 
-        /* ── TAB CONTENT ── */
         .tab-content {
             display: none;
             margin-top: 18px;
@@ -214,14 +217,12 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* Detalhes */
         .tab-content p {
             font-size: 14px;
             color: #444444;
             line-height: 1.7;
         }
 
-        /* Benefícios */
         .benefits-list {
             list-style: none;
             display: flex;
@@ -244,7 +245,6 @@
             margin-top: 1px;
         }
 
-        /* Avaliações */
         .reviews-summary {
             display: flex;
             align-items: center;
@@ -380,7 +380,6 @@
             line-height: 1.6;
         }
 
-        /* ── RELACIONADOS ── */
         .related-section h2 {
             font-size: 18px;
             margin-bottom: 20px;
@@ -466,7 +465,7 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 610px) {
             header {
                 flex-direction: column;
                 height: auto;
@@ -515,6 +514,7 @@
 <body>
 
     <header>
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -542,6 +542,18 @@
               </div>
             </div>
           </nav>
+=======
+        <div class="logo-container">
+            <img src="img/logo_cliente.jpeg" alt="Logo Meraki">
+            <span>Paula Evelise</span>
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#">Sobre Nós</a>
+            <a href="Contatos.html">Contato</a>
+        </nav>
+>>>>>>> 9ee7bf2a9346d8666487f7d777ec2e79e9f06adb
     </header>
 
     <div class="container">
@@ -569,23 +581,19 @@
                 </div>
 
                 <div class="buy-buttons">
-                    <button class="btn btn-cart">Adicionar ao Carrinho</button>
-                    <button class="btn btn-buy">Comprar Agora</button>
+                    <a href="#" class="btn btn-buy">Comprar Agora</a>
                 </div>
 
-                <!-- ABAS -->
                 <div class="tabs">
                     <button class="tab-item active" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
                     <button class="tab-item" onclick="abrirAba(event, 'tab-beneficios')">Benefícios</button>
                     <button class="tab-item" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
                 </div>
 
-                <!-- CONTEÚDO: Detalhes -->
                 <div id="tab-detalhes" class="tab-content active">
                     <p>A Caixinha de Música Meraki é produzida artesanalmente com madeira de reflorestamento e acabamento em verniz natural. Seu mecanismo interno de 18 lâminas toca uma melodia suave em loop, criada especialmente para uso terapêutico. Dimensões: 10 × 8 × 6 cm. Peso: 180 g. Acompanha embalagem presente e cartão explicativo sobre arteterapia sonora.</p>
                 </div>
 
-                <!-- CONTEÚDO: Benefícios -->
                 <div id="tab-beneficios" class="tab-content">
                     <ul class="benefits-list">
                         <li><span class="benefit-icon">🎵</span> <span><strong>Reduz a ansiedade</strong> — a melodia contínua estimula a produção de ondas alfa no cérebro, promovendo calma e foco.</span></li>
@@ -596,7 +604,6 @@
                     </ul>
                 </div>
 
-                <!-- CONTEÚDO: Avaliações -->
                 <div id="tab-avaliacoes" class="tab-content">
                     <div class="reviews-summary">
                         <div class="reviews-score">
@@ -651,7 +658,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- fim conteúdos de abas -->
 
             </div>
         </div>
@@ -663,25 +669,25 @@
                     <a href="produto3.html"><img src="img/diario.jpg" alt="Diário do Autoconhecimento"></a>
                     <div class="title">Diário do Autoconhecimento</div>
                     <div class="price">R$ 109,80</div>
-                    <button class="btn-add">Carrinho</button>
+                    <a href="produto3.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
                     <a href="produto4.html"><img src="img/Kit2.jpg" alt="Kit Artístico de Terapia"></a>
                     <div class="title">Kit Artístico de Terapia</div>
                     <div class="price">R$ 169,99</div>
-                    <button class="btn-add">Carrinho</button>
+                    <a href="produto4.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
                     <a href="produto2.html"><img src="img/Kit.jpg" alt="Kit Básico de Arte de Terapia"></a>
                     <div class="title">Kit Básico de Arte de Terapia</div>
                     <div class="price">R$ 149,90</div>
-                    <button class="btn-add">Carrinho</button>
+                    <a href="produto2.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
                     <a href="produto1.html"><img src="img/livro.jpg" alt="Livro de Terapia"></a>
                     <div class="title">Livro de Terapia</div>
                     <div class="price">R$ 99,90</div>
-                    <button class="btn-add">Carrinho</button>
+                    <a href="produto1.html" class="btn-add">Comprar</a>
                 </div>
             </div>
         </div>
@@ -695,6 +701,12 @@
         </div>
         <p class="copyright">&copy; 2024 Meraki. Todos os direitos reservados.</p>
     </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
     <script>
         function alterarQtd(valor) {
@@ -705,16 +717,20 @@
         }
 
         function abrirAba(event, idAba) {
-            // Remove "active" de todos os botões e conteúdos
             document.querySelectorAll('.tab-item').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-            // Ativa o botão clicado e o conteúdo correspondente
             event.currentTarget.classList.add('active');
             document.getElementById(idAba).classList.add('active');
         }
     </script>
+<<<<<<< HEAD
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+=======
+     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+     <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+     </script>
+>>>>>>> 9ee7bf2a9346d8666487f7d777ec2e79e9f06adb
 </body>
 
 </html>
