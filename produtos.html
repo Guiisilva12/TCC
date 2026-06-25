@@ -253,7 +253,7 @@
             <a href="" target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
             <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw" target="_blank"><img src="img/li.png" alt="YouTube"></a>
         </div>
-        <p>&copy; 2024 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
+        <p>&copy; 2026 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
     </div>
 
     <div vw class="enabled">
@@ -267,12 +267,19 @@
         let atual = 0;
         const total = 5;
         const track = document.getElementById('track');
+        const wrapper = document.querySelector('.carrossel-wrapper');
 
         function mover(direcao) {
             atual = (atual + direcao + total) % total;
-            const largura = document.querySelector('.carrossel-wrapper').offsetWidth;
+            const largura = wrapper.offsetWidth;
             track.style.transform = `translateX(-${atual * largura}px)`;
         }
+
+        // Atualiza o alinhamento caso a janela mude de tamanho (redimensionamento ou rotação do celular)
+        window.addEventListener('resize', () => {
+            const largura = wrapper.offsetWidth;
+            track.style.transform = `translateX(-${atual * largura}px)`;
+        });
 
         setInterval(() => mover(1), 4000);
     </script>
