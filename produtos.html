@@ -5,42 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
     <title>Paula Evelise — Arte & Terapia</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+        body { background-image: url(img/fundo.jpeg); color: #000000; }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            height: 150px;
+            background-color: #FFFAC3;
+            box-shadow: 15px 9px 7px rgba(59, 53, 53, 0.9);
+            border-bottom: 1px solid #FFFFFF;
         }
 
-        body {
-            background-image: url(img/fundo.jpeg);
-            color: #000000;
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        header img { height: 100px; width: 120px; }
+        .logo-text { font-size: 14px; font-weight: bold; letter-spacing: 1px; }
+
+        nav { display: flex; gap: 25px; }
+
+        header nav a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 24px;
+            font-weight: 500;
         }
 
-        #menu{
-    display: flex;
-    width: 100vw;   
-    background-color: #FFFAC3 !important;
-}
+        header nav a:hover { background-color: transparent; color: #000000; font-weight: bold; }
 
-#botao{
-    background-color: #e0f2fe; 
-}
-
-#links{
-    color: #333;
-}
-
-
-
-        button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
+        button { background-color: transparent; border: none; cursor: pointer; }
 
         .carrossel {
             display: flex;
@@ -59,28 +56,12 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
-        .carrossel-track {
-            display: flex;
-            transition: transform 0.7s ease;
-        }
+        .carrossel-track { display: flex; transition: transform 0.7s ease; }
 
-        .carrossel-track img {
-            min-width: 550px;
-            height: 250px;
-            object-fit: cover;
-            margin: 0;
-        }
+        .carrossel-track img { min-width: 550px; height: 250px; object-fit: cover; margin: 0; }
 
-        .carrossel button img {
-            width: 24px;
-            height: 24px;
-            opacity: 0.6;
-            transition: opacity 0.2s;
-        }
-
-        .carrossel button:hover img {
-            opacity: 1;
-        }
+        .carrossel button img { width: 24px; height: 24px; opacity: 0.6; transition: opacity 0.2s; }
+        .carrossel button:hover img { opacity: 1; }
 
         h2.section-title {
             text-align: center;
@@ -89,13 +70,7 @@
             margin: 40px 0 20px 0;
         }
 
-        .linha {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px 20px;
-            flex-wrap: wrap;
-        }
+        .linha { display: flex; justify-content: center; gap: 20px; padding: 15px 20px; flex-wrap: wrap; }
 
         .card {
             background-color: #FFFFFF;
@@ -112,18 +87,9 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05); }
 
-        .card img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 8px;
-            background-color: #F9F9F9;
-        }
+        .card img { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; background-color: #F9F9F9; }
 
         .card p.nome-produto {
             font-size: 13px;
@@ -135,15 +101,9 @@
             justify-content: center;
         }
 
-        .card-actions {
-            display: flex;
-            gap: 8px;
-            width: 100%;
-            justify-content: center;
-        }
+        .card-actions { display: flex; gap: 8px; width: 100%; justify-content: center; }
 
-        .card-actions a,
-        .card-actions button {
+        .card-actions a, .card-actions button {
             background-color: #f06292;
             color: white;
             border: none;
@@ -158,17 +118,9 @@
             text-align: center;
         }
 
-        .card-actions a:hover,
-        .card-actions button:hover {
-            background-color: #e91e8c;
-        }
+        .card-actions a:hover, .card-actions button:hover { background-color: #e91e8c; }
 
-        .nenhum-resultado {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            display: none;
-        }
+        .nenhum-resultado { text-align: center; padding: 20px; color: #666; display: none; }
 
         .footer {
             background-color: #FFFAC3;
@@ -182,118 +134,36 @@
             gap: 20px;
         }
 
-        .footer .icones {
-            display: flex;
-            gap: 30px;
-        }
-
-        .footer p {
-            font-size: 12px;
-            color: #999999;
-            text-align: center;
-        }
-
-        .footer a img {
-            width: 40px;
-            height: 40px;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-
-        .footer a:hover img {
-            opacity: 1;
-        }
+        .footer .icones { display: flex; gap: 30px; }
+        .footer p { font-size: 12px; color: #999999; text-align: center; }
+        .footer a img { width: 40px; height: 40px; opacity: 0.7; transition: opacity 0.2s; }
+        .footer a:hover img { opacity: 1; }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                height: auto;
-                padding: 15px 20px;
-                gap: 12px;
-            }
+            header { flex-direction: column; height: auto; padding: 15px 20px; gap: 12px; }
+            nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            nav a { font-size: 16px; }
 
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            .carrossel { margin-top: 20px; margin-bottom: 20px; }
+            .carrossel-wrapper { width: calc(100vw - 80px); margin: 0 10px; }
+            .carrossel-track img { min-width: calc(100vw - 80px); height: 180px; }
+            .carrossel button img { width: 20px; height: 20px; }
 
-            nav a {
-                font-size: 16px;
-            }
+            h2.section-title { font-size: 18px; margin: 25px 0 15px 0; }
+            .linha { gap: 12px; padding: 10px 12px; }
 
-            .carrossel {
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
+            .card { width: calc(50% - 6px); padding: 12px; gap: 8px; }
+            .card img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+            .card p.nome-produto { font-size: 11px; min-height: 28px; }
+            .card-actions { gap: 5px; }
+            .card-actions a, .card-actions button { font-size: 11px; padding: 5px 8px; }
 
-            .carrossel-wrapper {
-                width: calc(100vw - 80px);
-                margin: 0 10px;
-            }
-
-            .carrossel-track img {
-                min-width: calc(100vw - 80px);
-                height: 180px;
-            }
-
-            .carrossel button img {
-                width: 20px;
-                height: 20px;
-            }
-
-            h2.section-title {
-                font-size: 18px;
-                margin: 25px 0 15px 0;
-            }
-
-            .linha {
-                gap: 12px;
-                padding: 10px 12px;
-            }
-
-            .card {
-                width: calc(50% - 6px);
-                padding: 12px;
-                gap: 8px;
-            }
-
-            .card img {
-                width: 100%;
-                height: auto;
-                aspect-ratio: 1 / 1;
-            }
-
-            .card p.nome-produto {
-                font-size: 11px;
-                min-height: 28px;
-            }
-
-            .card-actions {
-                gap: 5px;
-            }
-
-            .card-actions a,
-            .card-actions button {
-                font-size: 11px;
-                padding: 5px 8px;
-            }
-
-            .footer {
-                padding: 25px 15px;
-                gap: 15px;
-            }
-
-            .footer .icones {
-                gap: 20px;
-            }
+            .footer { padding: 25px 15px; gap: 15px; }
+            .footer .icones { gap: 20px; }
         }
 
         @media (max-width: 480px) {
-            .card {
-                width: 100%;
-                max-width: 280px;
-            }
+            .card { width: 100%; max-width: 280px; }
         }
     </style>
 </head>
@@ -301,33 +171,16 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./imagens_index/logoCliente.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    Paula Evelise
-                  </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="./index.html" id="links">Início</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <div class="logo-container">
+            <img src="img/logo_cliente.jpeg" alt="Logo">
+            <span class="logo-text">Paula Evelise</span>
+        </div>
+        <nav>
+            <a href="./index.html">Início</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./Contatos.html">Contatos</a>
+            <a href="./sobre.html">Sobre</a>
+        </nav>
     </header>
 
     <div class="carrossel">
@@ -348,27 +201,27 @@
 
     <div class="linha">
         <div class="card">
-            <img src="img/livro.jpg" alt="Produto 1">
-            <p class="nome-produto">Livro de Terapia</p>
+            <img src="img/caixinha.jpg" alt="Kit Boneca de Pano">
+            <p class="nome-produto">Kit Boneca de Pano</p>
             <div class="card-actions">
                 <a href="produto1.html" target="_blank">Veja mais</a>
-                <a href="#" target="_blank">Comprar</a>
+                <a href="#">Comprar</a>
             </div>
         </div>
         <div class="card">
-            <img src="img/Kit.jpg" alt="Produto 2">
-            <p class="nome-produto">Kit básico de Arte de Terapia</p>
+            <img src="img/diario.jpg" alt="Kit de Cerâmica Iniciante">
+            <p class="nome-produto">Kit de Cerâmica Iniciante</p>
             <div class="card-actions">
                 <a href="produto2.html" target="_blank">Veja mais</a>
-                <a href="#" target="_blank">Comprar</a>
+                <a href="#">Comprar</a>
             </div>
         </div>
         <div class="card">
-            <img src="img/diario.jpg" alt="Produto 3">
-            <p class="nome-produto">Diário do Autoconhecimento</p>
+            <img src="img/livro.jpg" alt="Caderno de Esboços Artístico">
+            <p class="nome-produto">Caderno de Esboços Artístico</p>
             <div class="card-actions">
                 <a href="produto3.html" target="_blank">Veja mais</a>
-                <a href="#" target="_blank">Comprar</a>
+                <a href="#">Comprar</a>
             </div>
         </div>
     </div>
@@ -379,15 +232,15 @@
             <p class="nome-produto">Kit Artístico de Terapia</p>
             <div class="card-actions">
                 <a href="produto4.html" target="_blank">Veja mais</a>
-                <a href="#" target="_blank">Comprar</a>
+                <a href="#">Comprar</a>
             </div>
         </div>
         <div class="card">
-            <img src="img/caixinha.jpg" alt="Produto 5">
-            <p class="nome-produto">Livro de Músicas</p>
+            <img src="img/Kit.jpg" alt="Produto 5">
+            <p class="nome-produto">Kit Básico de Arte de Terapia</p>
             <div class="card-actions">
                 <a href="produto5.html" target="_blank">Veja mais</a>
-                <a href="#" target="_blank">Comprar</a>
+                <a href="#">Comprar</a>
             </div>
         </div>
     </div>
@@ -396,11 +249,9 @@
 
     <div class="footer">
         <div class="icones">
-            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img
-                    src="img/insta.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
             <a href="" target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw?fbclid=PAb21jcASmHBhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadO2gdKPivZzkQvcylAHbenTMVlVBev53xctaPs1BivFKf5j4a5mt0NcFr6Dg_aem_7Da9WjiU6zzyrXYJfn-gvg"
-                target="_blank"><img src="img/li.png" alt="YouTube"></a>
+            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw" target="_blank"><img src="img/li.png" alt="YouTube"></a>
         </div>
         <p>&copy; 2024 Paula Evelise. Todos os direitos reservados. Design por Arial Inventado.</p>
     </div>
@@ -425,14 +276,8 @@
 
         setInterval(() => mover(1), 4000);
     </script>
-<<<<<<< HEAD
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-=======
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
->>>>>>> 9ee7bf2a9346d8666487f7d777ec2e79e9f06adb
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 </body>
 
 </html>
