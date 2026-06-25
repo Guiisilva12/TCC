@@ -193,168 +193,20 @@ body {
     .footer .icones { gap: 20px; }
 }
 
-@media (max-width: 400px) {
-    #subprodutos, #submp { grid-template-columns: 1fr; }
-    #subprodutos img, #submp img { height: 220px; }
-}
-
-.sub2mp p{
-    font-size: 15px;
-    color: #e0f2fe;
-}
-
-@media (max-width: 640px) {
-
-    body{
-        background-position: center;
+@media (max-width: 320px){
+    
+    header{
+        padding: 0px;
     }
 
-    header{
+    #menu{
+        width: 100vw;
         display: flex;
         align-items: center;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 10px;
     }
 
-    .logo-container{
-        gap: 1vh;
-        padding: 1px;
-        flex-grow: 1;
-        justify-content: center;
-
-        span{
-        font-size: 18px;
-        display: flex;
-        }
-    }
-    nav{
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: row;
-        font-size: 5px;
-
-    }
-
-    #maispedidos{
-        .sub2mp {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2px;
-            padding: 10px;
-            justify-content: center;
-        }
-
-        .sub2mp img{
-            height: 200px;
-            width: 140px;
-        }
-
-        .sub2mp h3{
-            font-size: 20px;
-        }
-        .sub2mp button {
-            width: 60px;
-            height: 40px;
-        }
-    }
-
-}
-
-@media (max-width: 408px) {
-    header{
-        height: fit-content;
-    }
-
-    .logo-container{
-        gap: 1vh;
-        padding: 1px;
-        flex-grow: 1;
-        justify-content: center;
-
-        span{
-            font-size: 15px;
-            display: flex;
-        }
-    }
-
-    nav{
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        display: flex;
-        padding: 2px;
-        gap: 10px;
-
-        a{
-            height: 20px;
-            display: flex;  
-        }
+    #elementos{
+        width: 100px;
+        height: 200px;
     }
 }
-
-@media (max-width: 365px) {
-    header{
-        height: fit-content;
-    }
-
-    .logo-container{
-        gap: 1vh;
-        padding: 1px;
-        flex-grow: 1;
-        justify-content: center;
-
-        span{
-            font-size: 14px;
-            display: flex;
-        }
-    }
-
-    nav{
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        display: flex;
-        padding: 1px;
-        gap: 7px;
-
-        a{
-            font-size: 15px;
-            display: flex;
-        }
-    }
-}
-
-@media (max-width: 320px){
-    header{
-        height: fit-content;
-    }
-
-    .logo-container{
-        gap: 1vh;
-        padding: 1px;
-        flex-grow: 1;
-        justify-content: center;
-
-        span{
-            font-size: 14px;
-            display: flex;
-        }
-    }
-
-    nav{
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        display: flex;
-        
-
-        a{
-            font-size: 10px;
-            display: flex;
-        }
-    }
-}
-
