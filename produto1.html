@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
-    <title>Livro de Terapia - Meraki</title>
+    <title>Caderno de Esboços Artístico - Paula Evelise</title>
     <style>
-         * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -20,21 +19,31 @@
             color: #000000;
         }
 
-        #menu{
-        display: flex;
-        width: 100vw;   
-        background-color: #FFFAC3 !important;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            height: 150px;
+            background-color: #FFFAC3;
+            box-shadow: 15px 9px 7px rgba(59, 53, 53, 0.9);
+            border-bottom: 1px solid #EAEAEA;
         }
 
-        #botao{
-        background-color: #e0f2fe; 
+        .logo-container { display: flex; flex-direction: column; align-items: center; }
+        .logo-container img { height: 100px; width: 120px; }
+        .logo-container span { font-size: 12px; font-weight: bold; letter-spacing: 1px; }
+
+        nav { display: flex; gap: 25px; }
+
+        nav a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 24px;
+            font-weight: 500;
         }
 
-        #links{
-        color: #333;
-        }
-
-
+        nav a:hover { color: #000000; }
 
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
 
@@ -93,6 +102,7 @@
         .btn-buy { background-color: #f06292; color: white; }
         .btn-buy:hover { background-color: #e91e8c; }
 
+        /* ── TABS ── */
         .tabs {
             display: flex;
             gap: 20px;
@@ -119,6 +129,7 @@
             border-bottom: 2px solid #f06292;
         }
 
+        /* ── TAB CONTENT ── */
         .tab-content { display: none; margin-top: 18px; animation: fadeIn 0.25s ease; }
         .tab-content.active { display: block; }
 
@@ -129,6 +140,7 @@
 
         .tab-content p { font-size: 14px; color: #444444; line-height: 1.7; }
 
+        /* Benefícios */
         .benefits-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 
         .benefits-list li {
@@ -142,6 +154,7 @@
 
         .benefit-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
+        /* Avaliações */
         .reviews-summary {
             display: flex;
             align-items: center;
@@ -192,6 +205,7 @@
         .review-date { margin-left: auto; font-size: 11px; color: #aaa; flex-shrink: 0; }
         .review-text { font-size: 13px; color: #444; line-height: 1.6; }
 
+        /* ── RELACIONADOS ── */
         .related-section h2 { font-size: 18px; margin-bottom: 20px; font-weight: bold; }
 
         .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
@@ -212,6 +226,7 @@
         .related-card .title { font-size: 13px; font-weight: bold; color: #333333; }
         .related-card .price { font-size: 14px; font-weight: bold; }
 
+        /* btn-add como link */
         .btn-add {
             background-color: #f06292;
             color: white;
@@ -245,107 +260,20 @@
         .footer-socials a img { width: 40px; height: 40px; }
         footer .copyright { font-size: 12px; color: #999999; text-align: center; }
 
-        @media (max-width: 610px) {
-
-            header {
-                flex-direction: column;
-                height: auto;
-                padding: 15px 20px;
-                gap: 12px;
-            }
-
-            nav { gap: 15px; }
-            nav a { font-size: 16px; }
-
-            .product-essential {
-                flex-direction: column;
-                gap: 25px;
-                margin-bottom: 30px;
-            }
-
-            .product-gallery {
-                min-width: unset;
-                width: 100%;
-            }
-
-            .main-image {
-                height: 280px;
-                max-width: 100%;
-            }
-
-            .product-info {
-                min-width: unset;
-                width: 100%;
-            }
-
-            .product-info h1 { font-size: 20px; }
-            .product-info .price { font-size: 20px; }
-
-
-            .meta-row { flex-wrap: wrap; gap: 12px; }
-
-            .buy-buttons { flex-direction: column; }
-            .btn { width: 100%; }
-
-            .tabs { gap: 10px; overflow-x: auto; }
-            .tab-item { font-size: 13px; white-space: nowrap; }
-
-            .reviews-summary {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .reviews-score { width: 100%; }
-
-            .related-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-
-            .related-card { padding: 10px; }
-            .related-card img { height: 100px; }
-            .related-card .title { font-size: 11px; }
-            .related-card .price { font-size: 12px; }
-
-            footer { padding: 20px; }
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            .product-essential { flex-direction: column; }
+            .reviews-summary { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 
 <body>
+
     <header>
-<<<<<<< HEAD
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./imagens_index/logoCliente.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    Paula Evelise
-                  </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="./index.html" id="links">Início</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-=======
         <div class="logo-container">
             <a href="#"><img src="img/logo_cliente.jpeg" alt="Logo Meraki"></a>
-            <span>Paula Evelise</span>
+            <span>MERAKI</span>
         </div>
         <nav>
             <a href="#">Início</a>
@@ -353,21 +281,18 @@
             <a href="#">Sobre Nós</a>
             <a href="Contatos.html">Contato</a>
         </nav>
->>>>>>> 9ee7bf2a9346d8666487f7d777ec2e79e9f06adb
     </header>
 
     <div class="container">
         <div class="product-essential">
 
             <div class="product-gallery">
-                <img src="img/livro.jpg" alt="Livro de Terapia" class="main-image">
+                <img src="img/livro.jpg" alt="Caderno de Esboços Artístico" class="main-image">
             </div>
 
             <div class="product-info">
-                <h1>Livro de Terapia:<br>Encontre Paz nas Páginas.</h1>
-                <p class="description">Uma leitura transformadora que une psicologia e espiritualidade de forma
-                    acessível e profunda. Com linguagem acolhedora, o livro guia o leitor por reflexões sobre emoções,
-                    autoconhecimento e equilíbrio mental. Ideal para quem busca leveza e clareza no dia a dia.</p>
+                <h1>Caderno de Esboços Artístico:<br>Liberte sua Expressão Criativa.</h1>
+                <p class="description">Um caderno de artista com páginas kraft de alta gramatura, ideal para esboços, ilustrações, estudos de retrato e experimentos com lápis, grafite e aquarela. Cada página é um convite à exploração criativa e ao autoconhecimento através da arte. Ideal para artistas iniciantes e avançados.</p>
                 <div class="price">R$ 149,90</div>
 
                 <div class="meta-row">
@@ -383,29 +308,34 @@
                 </div>
 
                 <div class="buy-buttons">
+                    <a href="#" class="btn btn-cart">Adicionar ao Carrinho</a>
                     <a href="#" class="btn btn-buy">Comprar Agora</a>
                 </div>
 
+                <!-- ABAS -->
                 <div class="tabs">
                     <button class="tab-item active" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
                     <button class="tab-item" onclick="abrirAba(event, 'tab-beneficios')">Benefícios</button>
                     <button class="tab-item" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
                 </div>
 
+                <!-- CONTEÚDO: Detalhes -->
                 <div id="tab-detalhes" class="tab-content active">
-                    <p>O Livro de Terapia Meraki é uma obra de 280 páginas que percorre temas como inteligência emocional, ansiedade, autocompaixão e vínculos afetivos com base em fundamentos da psicologia contemporânea. Escrito em linguagem acessível, é indicado tanto para quem está iniciando uma jornada terapêutica quanto para quem já faz terapia e quer aprofundar o processo. Acompanha caderno de exercícios práticos ao final de cada capítulo. Formato: 14 × 21 cm. Capa dura.</p>
+                    <p>O Caderno de Esboços Artístico da Paula Evelise possui capa dura em papelão, 120 páginas de papel kraft 120g/m², formato 21 × 28 cm. As páginas têm textura levemente rugosa, ideal para grafite, lápis de cor, nanquim e aquarela leve. Inclui fita marcadora e elástico de fechamento. Produzido artesanalmente, cada caderno é único. Perfeito para estudos de figura humana, retratos, natureza e experimentos livres.</p>
                 </div>
 
+                <!-- CONTEÚDO: Benefícios -->
                 <div id="tab-beneficios" class="tab-content">
                     <ul class="benefits-list">
-                        <li><span class="benefit-icon">📚</span> <span><strong>Conhecimento acessível</strong> — traduz conceitos da psicologia clínica em uma linguagem simples, sem jargões técnicos.</span></li>
-                        <li><span class="benefit-icon">❤️</span> <span><strong>Desenvolve autocompaixão</strong> — os capítulos guiam o leitor a construir uma relação mais gentil consigo mesmo e com suas emoções.</span></li>
-                        <li><span class="benefit-icon">🔍</span> <span><strong>Apoia o processo terapêutico</strong> — os exercícios práticos são um complemento valioso para quem já faz ou planeja iniciar terapia.</span></li>
-                        <li><span class="benefit-icon">🧩</span> <span><strong>Compreensão dos padrões</strong> — ajuda a identificar comportamentos repetitivos e crenças limitantes que bloqueiam o crescimento emocional.</span></li>
-                        <li><span class="benefit-icon">🌱</span> <span><strong>Crescimento contínuo</strong> — pode ser relido em diferentes fases da vida, com novas percepções a cada leitura conforme o leitor evolui.</span></li>
+                        <li><span class="benefit-icon">✏️</span> <span><strong>Estimula a criatividade</strong> — o esboço livre sem pressão de resultado ativa o pensamento visual e a imaginação de forma espontânea.</span></li>
+                        <li><span class="benefit-icon">🧘</span> <span><strong>Meditação ativa</strong> — desenhar concentra a mente no momento presente, funcionando como uma prática de mindfulness natural.</span></li>
+                        <li><span class="benefit-icon">🎨</span> <span><strong>Desenvolve habilidades artísticas</strong> — o uso diário do caderno acelera o progresso em técnicas de observação, proporção e expressão.</span></li>
+                        <li><span class="benefit-icon">💭</span> <span><strong>Autoconhecimento visual</strong> — registrar pensamentos e emoções em desenhos revela padrões internos de forma única e reveladora.</span></li>
+                        <li><span class="benefit-icon">🌿</span> <span><strong>Reduz o estresse</strong> — pesquisas mostram que atividades artísticas manuais reduzem o cortisol e promovem bem-estar emocional.</span></li>
                     </ul>
                 </div>
 
+                <!-- CONTEÚDO: Avaliações -->
                 <div id="tab-avaliacoes" class="tab-content">
                     <div class="reviews-summary">
                         <div class="reviews-score">
@@ -432,7 +362,7 @@
                                 </div>
                                 <span class="review-date">há 2 dias</span>
                             </div>
-                            <p class="review-text">Li em uma semana e já estou relendo. Cada capítulo me fez refletir de um jeito diferente. Os exercícios práticos são incríveis — simples, mas muito poderosos. Melhor compra que fiz esse ano!</p>
+                            <p class="review-text">O papel é incrível, absorve grafite e aquarela muito bem. Estou usando todos os dias para estudos de retrato e a qualidade do caderno me surpreendeu. Vale cada centavo!</p>
                         </div>
 
                         <div class="review-card">
@@ -444,7 +374,7 @@
                                 </div>
                                 <span class="review-date">há 1 semana</span>
                             </div>
-                            <p class="review-text">Minha terapeuta recomendou e foi uma das melhores indicações que recebi. O livro complementou perfeitamente as sessões. A linguagem é muito acolhedora, parece que estamos sendo abraçados enquanto lemos.</p>
+                            <p class="review-text">Comprei para usar nas aulas de arteterapia e os alunos adoraram. O papel kraft dá um charme especial aos desenhos e incentiva a experimentação sem medo de errar.</p>
                         </div>
 
                         <div class="review-card">
@@ -456,10 +386,11 @@
                                 </div>
                                 <span class="review-date">há 2 semanas</span>
                             </div>
-                            <p class="review-text">Livro muito bom e bem escrito. Tirei uma estrela porque esperava um pouco mais de profundidade em alguns temas, mas para quem está começando é perfeito. A qualidade física do livro também é excelente.</p>
+                            <p class="review-text">Caderno muito bonito e bem acabado. Só achei que poderia ter mais páginas. Mas a textura do papel é ótima e o elástico de fechamento é resistente. Recomendo!</p>
                         </div>
                     </div>
                 </div>
+                <!-- fim conteúdos de abas -->
 
             </div>
         </div>
@@ -471,25 +402,25 @@
                     <a href="produto3.html"><img src="img/diario.jpg" alt="Diário do Autoconhecimento"></a>
                     <div class="title">Diário do Autoconhecimento</div>
                     <div class="price">R$ 109,90</div>
-                    <a href="produto3.html" class="btn-add">Comprar</a>
+                    <a href="produto3.html" class="btn-add">Carrinho</a>
                 </div>
                 <div class="related-card">
                     <a href="produto2.html"><img src="img/Kit.jpg" alt="Kit Básico de Arte de Terapia"></a>
                     <div class="title">Kit Básico de Arte de Terapia</div>
                     <div class="price">R$ 149,90</div>
-                    <a href="produto2.html" class="btn-add">Comprar</a>
+                    <a href="produto2.html" class="btn-add">Carrinho</a>
                 </div>
                 <div class="related-card">
                     <a href="produto4.html"><img src="img/Kit2.jpg" alt="Kit Artístico de Terapia"></a>
                     <div class="title">Kit Artístico de Terapia</div>
                     <div class="price">R$ 169,90</div>
-                    <a href="produto4.html" class="btn-add">Comprar</a>
+                    <a href="produto4.html" class="btn-add">Carrinho</a>
                 </div>
                 <div class="related-card">
                     <a href="produto5.html"><img src="img/caixinha.jpg" alt="Livro de Músicas"></a>
                     <div class="title">Livro de Músicas</div>
                     <div class="price">R$ 99,90</div>
-                    <a href="produto5.html" class="btn-add">Comprar</a>
+                    <a href="produto5.html" class="btn-add">Carrinho</a>
                 </div>
             </div>
         </div>
@@ -503,12 +434,6 @@
         </div>
         <p class="copyright">&copy; 2024 Meraki. Todos os direitos reservados.</p>
     </footer>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
 
     <script>
         function alterarQtd(valor) {
@@ -525,14 +450,6 @@
             document.getElementById(idAba).classList.add('active');
         }
     </script>
-<<<<<<< HEAD
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-=======
-     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-     <script>
-         new window.VLibras.Widget('https://vlibras.gov.br/app');
-     </script>
->>>>>>> 9ee7bf2a9346d8666487f7d777ec2e79e9f06adb
 </body>
 
 </html>
