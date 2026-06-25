@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
     <title>Kit de Cerâmica - Meraki</title>
     <style>
         * {
@@ -161,10 +161,12 @@
         .btn-buy {
             background-color: #f06292;
             color: white;
+            text-decoration: none;
         }
 
         .btn-buy:hover {
             background-color: #e91e8c;
+            color: white;
         }
 
         .tabs {
@@ -422,10 +424,12 @@
             font-size: 12px;
             cursor: pointer;
             width: 100%;
+            text-decoration: none;
         }
 
         .related-card .btn-add:hover {
             background-color: #e91e8c;
+            color: white;
         }
 
         footer {
@@ -460,12 +464,9 @@
             header {
                 flex-direction: column;
                 height: auto;
-                padding: 15px 20px;
+                padding: 0;
                 gap: 12px;
             }
-
-            nav { gap: 15px; }
-            nav a { font-size: 16px; }
 
             .product-essential {
                 flex-direction: column;
@@ -505,40 +506,39 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+        <nav class="navbar navbar-expand-lg" id="menu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./imagens_index/logoCliente.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                     Paula Evelise
-                  </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="./index.html" id="links">Início</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
-                  </li>
-                </ul>
-              </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html" id="links">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <div class="container">
         <div class="product-essential">
 
             <div class="product-gallery">
-                <!-- Imagem alterada para o Kit de Cerâmica -->
                 <img src="img/kit_ceramica.jpg" alt="Kit de Cerâmica Artesanal" class="main-image">
             </div>
 
@@ -579,7 +579,7 @@
                         <li><span class="benefit-icon">🧘</span> <span><strong>Mindfulness ativo</strong> — modelar exige atenção plena, atuando como uma meditação em movimento que reduz sintomas de ansiedade.</span></li>
                         <li><span class="benefit-icon">✨</span> <span><strong>Expressão criativa</strong> — permite materializar sentimentos e ideias em objetos reais, gerando um profundo sentimento de conquista.</span></li>
                         <li><span class="benefit-icon">💆</span> <span><strong>Desconexão digital</strong> — uma atividade perfeita para afastar as telas por algumas horas e descansar a mente da rotina acelerada.</span></li>
-                        <li><span class="benefit-icon">🎁</span> <span><strong>Experiência afetiva</strong> — mais do que um produto, você presenteia ou vivencia um momento de autocuidado e conexão artística.</span></li>
+                        <li><span class="benefit-icon">🎁</span> <span><strong>Experiência afetiva</strong> — mais do que um product, você presenteia ou vivencia um momento de autocuidado e conexão artística.</span></li>
                     </ul>
                 </div>
 
@@ -663,7 +663,6 @@
                     <a href="produto2.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <!-- O Kit antigo que ficava aqui foi trocado pelo Livro ou pela Caixinha se quiser manter -->
                     <a href="produto1.html"><img src="img/livro.jpg" alt="Livro de Terapia"></a>
                     <div class="title">Livro de Terapia</div>
                     <div class="price">R$ 99,90</div>
@@ -704,7 +703,7 @@
             document.getElementById(idAba).classList.add('active');
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
