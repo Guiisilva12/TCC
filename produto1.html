@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
-    <title>Caderno de Esboços Artístico - Paula Evelise</title>
+    <title>Caderno de Esboços Artístico — Paula Evelise | Meraki</title>
     <style>
         * {
             margin: 0;
@@ -312,7 +312,7 @@
             font-size: 18px; 
         }
         
-        .reviews-score small { 
+        .reviews-score <small> { 
             display: block; 
             font-size: 11px; 
             color: #888; 
@@ -570,10 +570,10 @@
 
     <header>
         <div class="logo-container">
-            <a href="#"><img src="img/logo_cliente.jpeg" alt="Logo Meraki"></a>
+            <a href="#" aria-label="Página inicial"><img src="img/logo_cliente.jpeg" alt="Logo Meraki"></a>
             <span>MERAKI</span>
         </div>
-        <nav>
+        <nav aria-label="Navegação principal">
             <a href="#">Início</a>
             <a href="produtos.html">Produtos</a>
             <a href="#">Sobre Nós</a>
@@ -581,16 +581,16 @@
         </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
         <div class="product-essential">
 
             <div class="product-gallery">
-                <img src="img/livro.jpg" alt="Caderno de Esboços Artístico" class="main-image">
+                <img src="img/livro.jpg" alt="Caderno de Esboços Artístico Meraki com capa dura" class="main-image">
             </div>
 
             <div class="product-info">
-                <h1>Caderno de Esboços Artístico:<br>Liberte sua Expressão Creative.</h1>
-                <p class="description">Um caderno de artista com páginas kraft de alta gramatura, ideal para esboços, ilustrações, estudos de retrato e experimentos com lápis, grafite e aquarela. Cada página é um convite à exploração criativa e ao autoconhecimento através da arte. Ideal para artistas iniciantes e avançados.</p>
+                <h1>Caderno de Esboços Artístico<br>Liberte sua Expressão Criativa</h1>
+                <p class="description">Desenvolvido artesanalmente com páginas kraft de alta gramatura, este caderno é perfeito para ilustrações, estudos de anatomia, retratos e experimentações com grafite, nanquim ou aquarela leve. Um espaço seguro para registrar sua evolução e explorar sua identidade visual.</p>
                 <div class="price">R$ 149,90</div>
 
                 <div class="meta-row">
@@ -611,30 +611,29 @@
                 </div>
 
                 <!-- ABAS -->
-                <div class="tabs">
-                    <button class="tab-item active" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
-                    <button class="tab-item" onclick="abrirAba(event, 'tab-beneficios')">Benefícios</button>
-                    <button class="tab-item" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
+                <div class="tabs" role="tablist">
+                    <button class="tab-item active" role="tab" aria-selected="true" aria-controls="tab-detalhes" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
+                    <button class="tab-item" role="tab" aria-selected="false" aria-controls="tab-beneficios" onclick="abrirAba(event, 'tab-beneficios')">Benefícios</button>
+                    <button class="tab-item" role="tab" aria-selected="false" aria-controls="tab-avaliacoes" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
                 </div>
 
                 <!-- CONTEÚDO: Detalhes -->
-                <div id="tab-detalhes" class="tab-content active">
-                    <p>O Caderno de Esboços Artístico da Paula Evelise possui capa dura em papelão, 120 páginas de papel kraft 120g/m², formato 21 × 28 cm. As páginas têm textura levemente rugosa, ideal para grafite, lápis de cor, nanquim e aquarela leve. Inclui fita marcadora e elástico de fechamento. Produzido artesanalmente, cada caderno é único. Perfeito para estudos de figura humana, retratos, natureza e experimentos livres.</p>
+                <div id="tab-detalhes" class="tab-content active" role="tabpanel">
+                    <p>O Caderno de Esboços Artístico da co-coleção Paula Evelise conta com capa dura resistente, 120 páginas em papel kraft de 120g/m² e formato ideal de 21 × 28 cm. Sua textura levemente rugosa oferece a aderência perfeita para técnicas secas e úmidas controladas. Acompanha fita marcadora de páginas e elástico de fechamento em tom coordenado.</p>
                 </div>
 
                 <!-- CONTEÚDO: Benefícios -->
-                <div id="tab-beneficios" class="tab-content">
+                <div id="tab-beneficios" class="tab-content" role="tabpanel">
                     <ul class="benefits-list">
-                        <li><span class="benefit-icon">✏️</span> <span><strong>Estimula a criatividade</strong> — o esboço livre sem pressão de resultado ativa o pensamento visual e a imaginação de forma espontânea.</span></li>
-                        <li><span class="benefit-icon">🧘</span> <span><strong>Meditação ativa</strong> — desenhar concentra a mente no momento presente, funcionando como uma prática de mindfulness natural.</span></li>
-                        <li><span class="benefit-icon">🎨</span> <span><strong>Desenvolve habilidades artísticas</strong> — o uso diário do caderno acelera o progresso em técnicas de observação, proporção e expressão.</span></li>
-                        <li><span class="benefit-icon">💭</span> <span><strong>Autoconhecimento visual</strong> — registrar pensamentos e emoções em desenhos revela padrões internos de forma única e reveladora.</span></li>
-                        <li><span class="benefit-icon">🌿</span> <span><strong>Reduz o estresse</strong> — pesquisas mostram que atividades artísticas manuais reduzem o cortisol e promovem bem-estar emocional.</span></li>
+                        <li><span class="benefit-icon">✏️</span> <span><strong>Estímulo Criativo</strong> — O fundo kraft quebra o bloqueio da tela branca, convidando ao traço livre e espontâneo.</span></li>
+                        <li><span class="benefit-icon">🧘</span> <span><strong>Mindfulness Ativo</strong> — Focar no processo manual do desenho ajuda a desacelerar a mente e reduz os níveis de estresse diários.</span></li>
+                        <li><span class="benefit-icon">🎨</span> <span><strong>Evolução Técnica</strong> — O hábito de manter um caderno físico documenta seu progresso em proporção, luz e sombra de forma tangível.</span></li>
+                        <li><span class="benefit-icon">🌿</span> <span><strong>Produção Consciente</strong> — Feito de forma artesanal com materiais selecionados, unindo durabilidade e respeito ao processo artístico.</span></li>
                     </ul>
                 </div>
 
                 <!-- CONTEÚDO: Avaliações -->
-                <div id="tab-avaliacoes" class="tab-content">
+                <div id="tab-avaliacoes" class="tab-content" role="tabpanel">
                     <div class="reviews-summary">
                         <div class="reviews-score">
                             <div class="big-score">4,8</div>
@@ -660,7 +659,7 @@
                                 </div>
                                 <span class="review-date">há 2 dias</span>
                             </div>
-                            <p class="review-text">O papel é incrível, absorve grafite e aquarela muito bem. Estou usando todos os dias para estudos de retrato e a qualidade do caderno me surpreendeu. Vale cada centavo!</p>
+                            <p class="review-text">O papel é incrível, o grafite desliza muito bem e a textura aceita camadas sem agredir a folha. Vale muito a pena para os estudos diários.</p>
                         </div>
 
                         <div class="review-card">
@@ -672,19 +671,7 @@
                                 </div>
                                 <span class="review-date">há 1 semana</span>
                             </div>
-                            <p class="review-text">Comprei para usar nas aulas de arteterapia e os alunos adoraram. O papel kraft dá um charme especial aos desenhos e incentiva a experimentação sem medo de errar.</p>
-                        </div>
-
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="review-avatar">KA</div>
-                                <div class="review-meta">
-                                    <strong>Karina A.</strong>
-                                    <span class="review-stars" aria-hidden="true">★★★★☆</span>
-                                </div>
-                                <span class="review-date">há 2 semanas</span>
-                            </div>
-                            <p class="review-text">Caderno muito bonito e bem acabado. Só achei que poderia ter mais páginas. Mas a textura do papel é ótima e o elástico de fechamento é resistente. Recomendo!</p>
+                            <p class="review-text">Uso nas minhas sessões de desenho de observação e arteterapia. O tom kraft dá um contraste lindo com lápis integral e caneta branca.</p>
                         </div>
                     </div>
                 </div>
@@ -692,58 +679,65 @@
             </div>
         </div>
 
-        <div class="related-section">
+        <section class="related-section">
             <h2>Você também pode gostar</h2>
             <div class="related-grid">
                 <div class="related-card">
-                    <a href="produto3.html"><img src="img/diario.jpg" alt="Diário do Autoconhecimento"></a>
-                    <div class="title">Diário do Autoconhecimento</div>
+                    <a href="produto3.html"><img src="img/diario.jpg" alt="Diário Autoconhecimento Criativo"></a>
+                    <div class="title">Diário de Autoconhecimento</div>
                     <div class="price">R$ 109,90</div>
-                    <a href="produto3.html" class="btn-add">Carrinho</a>
+                    <a href="produto3.html" class="btn-add">Ver Detalhes</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto2.html"><img src="img/Kit.jpg" alt="Kit Básico de Arte de Terapia"></a>
-                    <div class="title">Kit Básico de Arte de Terapia</div>
+                    <a href="produto2.html"><img src="img/Kit.jpg" alt="Kit Essencial de Arteterapia"></a>
+                    <div class="title">Kit Essencial de Arteterapia</div>
                     <div class="price">R$ 149,90</div>
-                    <a href="produto2.html" class="btn-add">Carrinho</a>
+                    <a href="produto2.html" class="btn-add">Ver Detalhes</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto4.html"><img src="img/Kit2.jpg" alt="Kit Artístico de Terapia"></a>
-                    <div class="title">Kit Artístico de Terapia</div>
+                    <a href="produto4.html"><img src="img/Kit2.jpg" alt="Estojo de Guache Artístico"></a>
+                    <div class="title">Estojo de Guache Artístico</div>
                     <div class="price">R$ 169,90</div>
-                    <a href="produto4.html" class="btn-add">Carrinho</a>
+                    <a href="produto4.html" class="btn-add">Ver Detalhes</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto5.html"><img src="img/caixinha.jpg" alt="Livro de Músicas"></a>
-                    <div class="title">Livro de Músicas</div>
+                    <a href="produto5.html"><img src="img/caixinha.jpg" alt="Bloco de Notas Pautado Meraki"></a>
+                    <div class="title">Bloco de Notas Pautado</div>
                     <div class="price">R$ 99,90</div>
-                    <a href="produto5.html" class="btn-add">Carrinho</a>
+                    <a href="produto5.html" class="btn-add">Ver Detalhes</a>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-socials">
-            <a href="#"><img src="img/insta.png" alt="Instagram"></a>
-            <a href="#"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="#"><img src="img/li.png" alt="LinkedIn"></a>
+            <a href="#" aria-label="Instagram"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="#" aria-label="WhatsApp"><img src="img/whatts.png" alt="WhatsApp"></a>
+            <a href="#" aria-label="LinkedIn"><img src="img/li.png" alt="LinkedIn"></a>
         </div>
         <p class="copyright">&copy; 2026 Meraki. Todos os direitos reservados.</p>
     </footer>
 
     <script>
         function alterarQtd(valor) {
-            let campo = document.getElementById('qtd');
-            let atual = parseInt(campo.value);
+            const campo = document.getElementById('qtd');
+            let atual = parseInt(campo.value) || 1;
             let novo = atual + valor;
             if (novo >= 1) campo.value = novo;
         }
 
         function abrirAba(event, idAba) {
-            document.querySelectorAll('.tab-item').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.tab-item').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
             event.currentTarget.classList.add('active');
+            event.currentTarget.setAttribute('aria-selected', 'true');
             document.getElementById(idAba).classList.add('active');
         }
     </script>
