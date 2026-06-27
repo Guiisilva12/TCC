@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
-    <!-- Bootstrap 5.3.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
-    <title>Kit de Cerâmica - Meraki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <title>Fantoche religiosos - Paula Evelise</title>
     <style>
         * {
             margin: 0;
@@ -18,25 +17,22 @@
 
         body {
             background-image: url(img/fundo.jpeg);
-            background-size: cover;
-            background-attachment: fixed;
             color: #000000;
-            overflow-x: hidden;
         }
 
-        #menu {
-            width: 100%;   
-            background-color: #FFFAC3 !important;
-        }
+        #menu{
+    display: flex;
+    width: 100vw;   
+    background-color: #FFFAC3 !important;
+}
 
-        #botao {
-            background-color: #e0f2fe; 
-        }
+#botao{
+    background-color: #e0f2fe; 
+}
 
-        #links {
-            color: #333;
-            font-weight: 500;
-        }
+#links{
+    color: #333;
+}
 
         .container {
             max-width: 1100px;
@@ -61,7 +57,7 @@
 
         .main-image {
             width: 100%;
-            max-width: 500px; /* Aumentado de 380px para 500px */
+            max-width: 380px;
             height: auto;
             border-radius: 15px;
             object-fit: cover;
@@ -109,7 +105,6 @@
             border-radius: 20px;
             padding: 4px 12px;
             gap: 15px;
-            background: #fff;
         }
 
         .quantity button {
@@ -146,7 +141,7 @@
             margin-top: 15px;
         }
 
-        .btn-buy {
+        .btn {
             flex: 1;
             padding: 12px;
             border-radius: 20px;
@@ -155,15 +150,28 @@
             cursor: pointer;
             border: none;
             text-align: center;
+        }
+
+        .btn-cart {
             background-color: #f06292;
             color: white;
             text-decoration: none;
-            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .btn-cart:hover {
+            background-color: #e91e8c;
+        }
+
+        .btn-buy {
+            background-color: #f06292;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-buy:hover {
             background-color: #e91e8c;
-            color: white;
         }
 
         .tabs {
@@ -203,8 +211,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to   { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .tab-content p {
@@ -421,25 +436,22 @@
             font-size: 12px;
             cursor: pointer;
             width: 100%;
-            text-decoration: none;
-            transition: background 0.2s;
         }
 
         .related-card .btn-add:hover {
             background-color: #e91e8c;
-            color: white;
         }
 
         footer {
             border-top: 1px solid #EAEAEA;
             margin-top: 60px;
             padding: 30px 40px;
-            background-color: #FFFAC3;
             display: flex;
+            background-color: #FFFAC3;
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.1);
+            box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.9);
         }
 
         .footer-socials {
@@ -458,44 +470,106 @@
             text-align: center;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
+        @media (max-width: 610px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 12px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
             .product-essential {
                 flex-direction: column;
                 gap: 25px;
                 margin-bottom: 30px;
             }
 
-            .product-gallery, .product-info { 
-                min-width: unset; 
-                width: 100%; 
-            }
-            
-            .main-image { 
-                max-width: 100%; 
+            .product-gallery {
+                min-width: unset;
+                width: 100%;
             }
 
-            .product-info h1 { font-size: 22px; }
-            .product-info .price { font-size: 22px; }
+            .main-image {
+                max-width: 100%;
+            }
 
-            .meta-row { flex-wrap: wrap; gap: 12px; }
+            .product-info {
+                min-width: unset;
+                width: 100%;
+            }
 
-            .buy-buttons { flex-direction: column; }
-            .btn-buy { width: 100%; }
+            .product-info h1 {
+                font-size: 20px;
+            }
 
-            .tabs { gap: 10px; overflow-x: auto; }
-            .tab-item { font-size: 13px; white-space: nowrap; }
+            .product-info .price {
+                font-size: 20px;
+            }
 
-            .reviews-summary { flex-direction: column; align-items: flex-start; }
-            .reviews-score { width: 100%; }
+            .meta-row {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
 
-            .related-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-            .related-card { padding: 10px; }
-            .related-card img { height: 100px; }
-            .related-card .title { font-size: 11px; }
-            .related-card .price { font-size: 12px; }
+            .buy-buttons {
+                flex-direction: column;
+            }
 
-            footer { padding: 20px; }
+            .btn {
+                width: 100%;
+            }
+
+            .tabs {
+                gap: 10px;
+                overflow-x: auto;
+            }
+
+            .tab-item {
+                font-size: 13px;
+                white-space: nowrap;
+            }
+
+            .reviews-summary {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .reviews-score {
+                width: 100%;
+            }
+
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .related-card {
+                padding: 10px;
+            }
+
+            .related-card img {
+                height: 100px;
+            }
+
+            .related-card .title {
+                font-size: 11px;
+            }
+
+            .related-card .price {
+                font-size: 12px;
+            }
+
+            footer {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -503,46 +577,45 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg" id="menu">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./imagens_index/logoCliente.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                     Paula Evelise
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html" id="links">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
-                        </li>
-                    </ul>
-                </div>
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html" id="links">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
-
-    <div class="container">
+<div class="container">
         <div class="product-essential">
 
             <div class="product-gallery">
-                <img src="img/diario.jpg" alt="Kit de Cerâmica Artesanal" class="main-image">
+                <img src="./imagens_index/religiosas.jpg" alt="Fantoches religiosos" class="main-image">
             </div>
 
             <div class="product-info">
-                <h1>Kit de Cerâmica Artesanal:<br>Modele a Mente, Crie com as Mãos.</h1>
-                <p class="description">Descubra o poder terapêutico da argila. Este kit foi cuidadosamente preparado para que você possa vivenciar a cerâmica em casa, promovendo atenção plena (mindfulness) e reduzindo o estresse. Perfeito para iniciantes, o kit oferece todos os elements necessários para moldar suas próprias peças afetivas e se reconectar com sua essência criativa.</p>
-                <div class="price">R$ 149,90</div>
+                <h1>Amor em Cada Ponto: Nossos Bonecos de Pano Religiosos</h1>
+                <p class="description">Há algo de muito mágico no artesanato feito com o coração. Nossos bonecos de pano religiosos nascem para ser mais do que um enfeite; eles são um abraço em forma de devoção. Cada santinho e santinha é costurado à mão, ponto por ponto, unindo a delicadeza do tecido ao sentimento puro da fé.Perfeitos para abençoar o quartinho das crianças, presentear em batizados e primeiras comunhões, ou simplesmente trazer uma atmosfera de paz e proteção para o seu lar. Uma forma lúdica, leve e cheia de amor de aproximar quem a gente ama da espiritualidade.Leve para casa um pedacinho de amor e fé moldado em tecido.</p>
+                
 
                 <div class="meta-row">
                     <div class="quantity">
@@ -552,33 +625,31 @@
                     </div>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
-                        <span>4,9 — 142 avaliações</span>
+                        <span>4,9 — 36 avaliações</span>
                     </div>
                 </div>
 
-                <div class="buy-buttons">
-                    <a href="#" class="btn-buy">Comprar Agora</a>
+                  <div class="buy-buttons">
+                    <a href="https://wa.me/5511960605992?text=Ol%C3%A1!%0AQuero%20informa%C3%A7%C3%B5es%20sobre%20os%20fantoches%20religiosos." target="_blank" class="btn btn-buy">Enviar Mensagem</a>
                 </div>
 
                 <div class="tabs">
                     <button class="tab-item active" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
-                    <button class="tab-item" onclick="abrirAba(event, 'tab-beneficios')">Benefícios</button>
+                    
                     <button class="tab-item" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
                 </div>
 
                 <div id="tab-detalhes" class="tab-content active">
-                    <p>O Kit de Cerâmica Meraki inclui 1 kg de argila natural de excelente plasticidade, um jogo com 5 estecas (ferramentas de modelagem) em madeira, uma esponja de acabamento, um fio de corte e um guia ilustrado com técnicas básicas de modelagem manual (pinch pot e acordelado). Peso total: 1,3 kg. Embalagem sustentável e ideal para presente.</p>
+                    <ul><p><li>100% Artesanal: Cada peça é única, feita com dedicação e carinho por mãos artesãs.</li>
+
+                    <li>Material Seguro: Tecidos antialérgicos, macios e perfeitos para o manuseio de crianças.</li>
+
+                    <li>Presente Inesquecível: Ideal para maternidade, batizados, aniversários e datas religiosas especiais.</li>
+
+                    <li>Decoração com Propósito: Adiciona um toque de doçura, paz e proteção a qualquer ambiente.</p></ul></li>
                 </div>
 
-                <div id="tab-beneficios" class="tab-content">
-                    <ul class="benefits-list">
-                        <li><span class="benefit-icon">🏺</span> <span><strong>Estímulo sensorial</strong> — o contato direto com a argila fria e maleável aterra os pensamentos e altera o foco no momento presente.</span></li>
-                        <li><span class="benefit-icon">🧘</span> <span><strong>Mindfulness ativo</strong> — modelar exige atenção plena, atuando como uma meditação em movimento que reduz sintomas de ansiedade.</span></li>
-                        <li><span class="benefit-icon">✨</span> <span><strong>Expressão criativa</strong> — permite materializar sentimentos e ideias em objetos reais, gerando um profundo sentimento de conquista.</span></li>
-                        <li><span class="benefit-icon">💆</span> <span><strong>Desconexão digital</strong> — uma atividade perfeita para afastar as telas por algumas horas e descansar a mente da rotina acelerada.</span></li>
-                        <li><span class="benefit-icon">🎁</span> <span><strong>Experiência afetiva</strong> — mais do que um produto, você presenteia ou vivencia um momento de autocuidado e conexão artística.</span></li>
-                    </ul>
-                </div>
+            
 
                 <div id="tab-avaliacoes" class="tab-content">
                     <div class="reviews-summary">
@@ -588,9 +659,9 @@
                             <small>142 avaliações</small>
                         </div>
                         <div class="reviews-bars">
-                            <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span>129</span></div>
+                            <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span>25</span></div>
                             <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><span>10</span></div>
-                            <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span>3</span></div>
+                            <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span>1</span></div>
                             <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div>
                             <div class="bar-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div>
                         </div>
@@ -606,7 +677,7 @@
                                 </div>
                                 <span class="review-date">há 2 dias</span>
                             </div>
-                            <p class="review-text">Que experiência maravilhosa! Comprei em um fim de semana estressante e passei o sábado modelando um potinho. A argila é ótima e as ferramentas ajudam muito no acabamento. Recomendo muito!</p>
+                            <p class="review-text">Estou completamente apaixonada! Comprei a Nossa Senhora para o quarto da minha filha e ela não larga. O tecido é super macio, o acabamento é impecável e o rostinho transmite uma paz linda. É muito bom ver minha filha crescendo com um brinquedo que também traz um significado tão bonito.</p>
                         </div>
 
                         <div class="review-card">
@@ -618,7 +689,7 @@
                                 </div>
                                 <span class="review-date">há 5 dias</span>
                             </div>
-                            <p class="review-text">O kit vem super completo e o manual é muito bem explicado. Consegui fazer minhas primeiras peças mesmo sem nunca ter mexido com cerâmica antes. Excelente para desligar a cabeça do trabalho.</p>
+                            <p class="review-text">Dei de presente de batizado para o meu afilhado e foi o maior sucesso da festa. Todo mundo queria ver de perto.</p>
                         </div>
 
                         <div class="review-card">
@@ -630,7 +701,7 @@
                                 </div>
                                 <span class="review-date">há 2 semanas</span>
                             </div>
-                            <p class="review-text">Adorei o kit, as ferramentas de madeira são lindas. Só queria que viesse um pouco mais de argila porque me empolguei fazendo as peças! Mas o produto é excelente.</p>
+                            <p class="review-text">Excelente atendimento e o boneco é ainda mais lindo pessoalmente do que nas fotos do site! Super leve, seguro para crianças pequenas (não tem peças que soltam) e muito fofinho. Com certeza vou comprar outros santos para colecionar.</p>
                         </div>
                     </div>
                 </div>
@@ -642,27 +713,27 @@
             <h2>Você também pode gostar</h2>
             <div class="related-grid">
                 <div class="related-card">
-                    <a href="produto3.html"><img src="img/caixinha.jpg" alt="Diário do Autoconhecimento"></a>
-                    <div class="title">kit de boneca (costura)</div>
-                    <div class="price">R$ 109,80</div>
+                    <a href="produto3.html"><img src="./imagens_index/bolsa.jpg" alt="Bolsas personalizadas"></a>
+                    <div class="title">Bolsas personalizadas</div>
+                    
                     <a href="produto3.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto4.html"><img src="img/Kit2.jpg" alt="Kit Artístico de Terapia"></a>
-                    <div class="title">Kit Artístico de Terapia</div>
-                    <div class="price">R$ 169,99</div>
+                    <a href="produto4.html"><img src="./imagens_index/boneca.jpg" alt="Fantoches simples"></a>
+                    <div class="title">Fantoches simples</div>
+                    
                     <a href="produto4.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto2.html"><img src="img/Kit.jpg" alt="Kit Básico de Arte de Terapia"></a>
-                    <div class="title">Kit Básico de Arte de Terapia</div>
-                    <div class="price">R$ 149,90</div>
+                    <a href="produto2.html"><img src="./imagens_index/banner dela.jpg" alt="Banners personalizados"></a>
+                    <div class="title">Banners personalizados</div>
+                    
                     <a href="produto2.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto1.html"><img src="img/livro.jpg" alt="Livro de Terapia"></a>
-                    <div class="title">Livro de Desenhos</div>
-                    <div class="price">R$ 99,90</div>
+                    <a href="produto1.html"><img src="./imagens_index/kit.jpg" alt="Kit Boneca de Pano"></a>
+                    <div class="title">Kit Boneca de Pano</div>
+                    
                     <a href="produto1.html" class="btn-add">Comprar</a>
                 </div>
             </div>
@@ -671,9 +742,9 @@
 
     <footer>
         <div class="footer-socials">
-            <a href="#"><img src="img/insta.png" alt="Instagram"></a>
-            <a href="#"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="#"><img src="img/li.png" alt="LinkedIn"></a>
+         <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="https://wa.me/5511960605992?text=Ol%C3%A1!%0AQuero%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos." target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
+            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw" target="_blank"><img src="img/li.png" alt="YouTube"></a>
         </div>
         <p class="copyright">&copy; 2026 Meraki. Todos os direitos reservados.</p>
     </footer>

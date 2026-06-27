@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo_cliente.jpeg" type="image/x-icon">
-    <title>Caderno de Esboços Artístico — Paula Evelise | Meraki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <title>Kit bonecas - Paula Evelise</title>
     <style>
         * {
             margin: 0;
@@ -16,122 +17,87 @@
 
         body {
             background-image: url(img/fundo.jpeg);
-            background-size: cover;
-            background-attachment: fixed;
             color: #000000;
-            overflow-x: hidden;
         }
 
-        header {
+        #menu{
+    display: flex;
+    width: 100vw;   
+    background-color: #FFFAC3 !important;
+}
+
+#botao{
+    background-color: #e0f2fe; 
+}
+
+#links{
+    color: #333;
+}
+
+
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .product-essential {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            min-height: 150px;
-            background-color: #FFFAC3;
-            box-shadow: 0 4px 15px rgba(59, 53, 53, 0.3);
-            border-bottom: 1px solid #EAEAEA;
-        }
-
-        .logo-container { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-        }
-        
-        .logo-container img { 
-            height: 100px; 
-            width: 120px; 
-            object-fit: contain;
-        }
-        
-        .logo-container span { 
-            font-size: 12px; 
-            font-weight: bold; 
-            letter-spacing: 1px; 
-            margin-top: 5px;
-        }
-
-        nav { 
-            display: flex; 
-            gap: 25px; 
+            gap: 50px;
+            margin-bottom: 60px;
             flex-wrap: wrap;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 20px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav a:hover { 
-            color: #f06292; 
-        }
-
-        .container { 
-            max-width: 1100px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
-        }
-
-        .product-essential { 
-            display: flex; 
-            gap: 50px; 
-            margin-bottom: 60px; 
-            flex-wrap: wrap; 
-        }
-
-        .product-gallery { 
-            flex: 1; 
-            min-width: 320px; 
+        .product-gallery {
+            flex: 1;
+            min-width: 320px;
             display: flex;
             justify-content: center;
+            align-items: flex-start;
         }
 
         .main-image {
             width: 100%;
-            max-width: 500px;
+            max-width: 380px;
             height: auto;
-            max-height: 500px;
             border-radius: 15px;
             object-fit: cover;
             border: 1px solid #EAEAEA;
             background-color: #f9f9f9;
         }
 
-        .product-info { 
-            flex: 1; 
-            min-width: 320px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-        }
-        
-        .product-info h1 { 
-            font-size: 26px; 
-            line-height: 1.3; 
-            font-weight: bold; 
-        }
-        
-        .product-info .description { 
-            font-size: 14px; 
-            color: #444444; 
-            line-height: 1.5; 
-        }
-        
-        .product-info .price { 
-            font-size: 24px; 
-            font-weight: bold; 
-            margin-top: 5px; 
+        .product-info {
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .meta-row { 
-            display: flex; 
-            align-items: center; 
-            gap: 20px; 
-            margin-top: 10px; 
+        .product-info h1 {
+            font-size: 26px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+
+        .product-info .description {
+            font-size: 14px;
+            color: #444444;
+            line-height: 1.5;
+        }
+
+        .product-info .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
         }
 
         .quantity {
@@ -141,42 +107,40 @@
             border-radius: 20px;
             padding: 4px 12px;
             gap: 15px;
-            background-color: #ffffff;
         }
 
-        .quantity button { 
-            background: none; 
-            border: none; 
-            font-size: 16px; 
-            cursor: pointer; 
-            padding: 0 4px;
-        }
-        
-        .quantity input { 
-            width: 20px; 
-            text-align: center; 
-            border: none; 
-            font-size: 14px; 
-            outline: none; 
+        .quantity button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
         }
 
-        .rating { 
-            display: flex; 
-            align-items: center; 
-            gap: 5px; 
-            font-size: 13px; 
-            color: #333333; 
-        }
-        
-        .stars { 
-            color: #FFD700; 
-            font-size: 16px; 
+        .quantity input {
+            width: 20px;
+            text-align: center;
+            border: none;
+            font-size: 14px;
+            outline: none;
         }
 
-        .buy-buttons { 
-            display: flex; 
-            gap: 15px; 
-            margin-top: 15px; 
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #333333;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 16px;
+        }
+
+        .buy-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
         }
 
         .btn {
@@ -188,31 +152,30 @@
             cursor: pointer;
             border: none;
             text-align: center;
+        }
+
+        .btn-cart {
+            background-color: #f06292;
+            color: white;
             text-decoration: none;
             display: inline-block;
-            transition: background-color 0.2s;
         }
 
-        .btn-cart { 
-            background-color: #ffffff; 
-            color: #f06292; 
-            border: 2px solid #f06292;
-        }
-        
-        .btn-cart:hover { 
-            background-color: #fff0f5; 
-        }
-        
-        .btn-buy { 
-            background-color: #f06292; 
-            color: white; 
-        }
-        
-        .btn-buy:hover { 
-            background-color: #e91e8c; 
+        .btn-cart:hover {
+            background-color: #e91e8c;
         }
 
-        /* ── TABS ── */
+        .btn-buy {
+            background-color: #f06292;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-buy:hover {
+            background-color: #e91e8c;
+        }
+
         .tabs {
             display: flex;
             gap: 20px;
@@ -239,34 +202,39 @@
             border-bottom: 2px solid #f06292;
         }
 
-        /* ── TAB CONTENT ── */
-        .tab-content { 
-            display: none; 
-            margin-top: 18px; 
-            animation: fadeIn 0.25s ease; 
+        .tab-content {
+            display: none;
+            margin-top: 18px;
+            animation: fadeIn 0.25s ease;
         }
-        
-        .tab-content.active { 
-            display: block; 
+
+        .tab-content.active {
+            display: block;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to   { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .tab-content p { 
-            font-size: 14px; 
-            color: #444444; 
-            line-height: 1.7; 
+        .tab-content p {
+            font-size: 14px;
+            color: #444444;
+            line-height: 1.7;
         }
 
-        /* Benefícios */
-        .benefits-list { 
-            list-style: none; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 10px; 
+        .benefits-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .benefits-list li {
@@ -278,13 +246,12 @@
             line-height: 1.5;
         }
 
-        .benefit-icon { 
-            font-size: 18px; 
-            flex-shrink: 0; 
-            margin-top: 1px; 
+        .benefit-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 1px;
         }
 
-        /* Avaliações */
         .reviews-summary {
             display: flex;
             align-items: center;
@@ -296,87 +263,87 @@
             border: 1px solid #f9cfe0;
         }
 
-        .reviews-score { 
-            text-align: center; 
-        }
-        
-        .reviews-score .big-score { 
-            font-size: 42px; 
-            font-weight: bold; 
-            color: #f06292; 
-            line-height: 1; 
-        }
-        
-        .reviews-score .big-stars { 
-            color: #FFD700; 
-            font-size: 18px; 
-        }
-        
-        .reviews-score <small> { 
-            display: block; 
-            font-size: 11px; 
-            color: #888; 
-            margin-top: 2px; 
+        .reviews-score {
+            text-align: center;
         }
 
-        .reviews-bars { 
-            flex: 1; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 5px; 
+        .reviews-score .big-score {
+            font-size: 42px;
+            font-weight: bold;
+            color: #f06292;
+            line-height: 1;
         }
 
-        .bar-row { 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            font-size: 12px; 
-            color: #555; 
-        }
-        
-        .bar-row span:first-child { 
-            width: 30px; 
-            text-align: right; 
-            flex-shrink: 0; 
-        }
-        
-        .bar-track { 
-            flex: 1; 
-            height: 7px; 
-            background: #eee; 
-            border-radius: 4px; 
-            overflow: hidden; 
-        }
-        
-        .bar-fill { 
-            height: 100%; 
-            background: #f06292; 
-            border-radius: 4px; 
-        }
-        
-        .bar-row span:last-child { 
-            width: 24px; 
-            flex-shrink: 0; 
+        .reviews-score .big-stars {
+            color: #FFD700;
+            font-size: 18px;
         }
 
-        .review-list { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
+        .reviews-score small {
+            display: block;
+            font-size: 11px;
+            color: #888;
+            margin-top: 2px;
         }
 
-        .review-card { 
-            background: #ffffff; 
-            border: 1px solid #EAEAEA; 
-            border-radius: 12px; 
-            padding: 14px 16px; 
+        .reviews-bars {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
-        .review-header { 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
-            margin-bottom: 6px; 
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .bar-row span:first-child {
+            width: 30px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 7px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #f06292;
+            border-radius: 4px;
+        }
+
+        .bar-row span:last-child {
+            width: 24px;
+            flex-shrink: 0;
+        }
+
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .review-card {
+            background: #ffffff;
+            border: 1px solid #EAEAEA;
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
         }
 
         .review-avatar {
@@ -393,44 +360,43 @@
             flex-shrink: 0;
         }
 
-        .review-meta { 
-            display: flex; 
-            flex-direction: column; 
-        }
-        
-        .review-meta strong { 
-            font-size: 13px; 
-        }
-        
-        .review-meta .review-stars { 
-            color: #FFD700; 
-            font-size: 13px; 
-        }
-        
-        .review-date { 
-            margin-left: auto; 
-            font-size: 11px; 
-            color: #aaa; 
-            flex-shrink: 0; 
-        }
-        
-        .review-text { 
-            font-size: 13px; 
-            color: #444; 
-            line-height: 1.6; 
+        .review-meta {
+            display: flex;
+            flex-direction: column;
         }
 
-        /* ── RELACIONADOS ── */
-        .related-section h2 { 
-            font-size: 18px; 
-            margin-bottom: 20px; 
-            font-weight: bold; 
+        .review-meta strong {
+            font-size: 13px;
         }
 
-        .related-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
-            gap: 20px; 
+        .review-meta .review-stars {
+            color: #FFD700;
+            font-size: 13px;
+        }
+
+        .review-date {
+            margin-left: auto;
+            font-size: 11px;
+            color: #aaa;
+            flex-shrink: 0;
+        }
+
+        .review-text {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .related-section h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
         }
 
         .related-card {
@@ -445,42 +411,37 @@
             gap: 10px;
         }
 
-        .related-card img { 
-            width: 100%; 
-            height: 140px; 
-            object-fit: cover; 
-            border-radius: 8px; 
-        }
-        
-        .related-card .title { 
-            font-size: 13px; 
-            font-weight: bold; 
-            color: #333333; 
-        }
-        
-        .related-card .price { 
-            font-size: 14px; 
-            font-weight: bold; 
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
-        .btn-add {
+        .related-card .title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .related-card .price {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .related-card .btn-add {
             background-color: #f06292;
             color: white;
             border: none;
             border-radius: 15px;
-            padding: 7px 15px;
+            padding: 5px 15px;
             font-size: 12px;
-            font-weight: bold;
             cursor: pointer;
             width: 100%;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            transition: background-color 0.2s;
         }
 
-        .btn-add:hover { 
-            background-color: #e91e8c; 
+        .related-card .btn-add:hover {
+            background-color: #e91e8c;
         }
 
         footer {
@@ -488,79 +449,128 @@
             margin-top: 60px;
             padding: 30px 40px;
             display: flex;
+            background-color: #FFFAC3;
             flex-direction: column;
             align-items: center;
-            background-color: #FFFAC3;
             gap: 15px;
-            box-shadow: 0 -4px 15px rgba(49, 44, 44, 0.1);
+            box-shadow: 0 -10px 15px -5px rgba(49, 44, 44, 0.9);
         }
 
-        .footer-socials { 
-            display: flex; 
-            gap: 15px; 
-        }
-        
-        .footer-socials a img { 
-            width: 40px; 
-            height: 40px; 
-        }
-        
-        footer .copyright { 
-            font-size: 12px; 
-            color: #999999; 
-            text-align: center; 
+        .footer-socials {
+            display: flex;
+            gap: 15px;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            header { 
-                flex-direction: column; 
-                height: auto; 
-                padding: 20px; 
-                gap: 15px; 
-                text-align: center;
+        .footer-socials a img {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer .copyright {
+            font-size: 12px;
+            color: #999999;
+            text-align: center;
+        }
+
+        @media (max-width: 610px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 12px;
             }
-            
-            nav { 
-                justify-content: center; 
+
+            nav {
                 gap: 15px;
             }
-            
-            nav a { 
-                font-size: 18px; 
+
+            nav a {
+                font-size: 16px;
             }
 
-            .product-essential { 
-                flex-direction: column; 
-                gap: 30px;
+            .product-essential {
+                flex-direction: column;
+                gap: 25px;
+                margin-bottom: 30px;
             }
-            
-            .product-gallery, .product-info {
+
+            .product-gallery {
+                min-width: unset;
                 width: 100%;
-                min-width: 100%;
             }
 
             .main-image {
-                max-height: 400px;
+                max-width: 100%;
+            }
+
+            .product-info {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .product-info h1 {
+                font-size: 20px;
+            }
+
+            .product-info .price {
+                font-size: 20px;
+            }
+
+            .meta-row {
+                flex-wrap: wrap;
+                gap: 12px;
             }
 
             .buy-buttons {
                 flex-direction: column;
             }
 
-            .reviews-summary { 
-                flex-direction: column; 
-                align-items: flex-start; 
-                gap: 15px;
+            .btn {
+                width: 100%;
             }
-            
-            .reviews-bars { 
-                width: 100%; 
+
+            .tabs {
+                gap: 10px;
+                overflow-x: auto;
+            }
+
+            .tab-item {
+                font-size: 13px;
+                white-space: nowrap;
+            }
+
+            .reviews-summary {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .reviews-score {
+                width: 100%;
             }
 
             .related-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
+            }
+
+            .related-card {
+                padding: 10px;
+            }
+
+            .related-card img {
+                height: 100px;
+            }
+
+            .related-card .title {
+                font-size: 11px;
+            }
+
+            .related-card .price {
+                font-size: 12px;
+            }
+
+            footer {
+                padding: 20px;
             }
         }
     </style>
@@ -569,82 +579,94 @@
 <body>
 
     <header>
-        <div class="logo-container">
-            <a href="#" aria-label="Página inicial"><img src="img/logo_cliente.jpeg" alt="Logo Meraki"></a>
-            <span>MERAKI</span>
-        </div>
-        <nav aria-label="Navegação principal">
-            <a href="#">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="#">Sobre Nós</a>
-            <a href="Contatos.html">Contato</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./imagens_index/logoCliente.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Paula Evelise
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botao"> 
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html" id="links">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./produtos.html" id="links">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Contatos.html" id="links">Contatos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./sobre.html" id="links">Sobre</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
-    <main class="container">
+    <div class="container">
         <div class="product-essential">
 
             <div class="product-gallery">
-                <img src="img/livro.jpg" alt="Caderno de Esboços Artístico Meraki com capa dura" class="main-image">
+                <img src="./imagens_index/kit.jpg" alt="Kit Boneca de Pano" class="main-image">
             </div>
 
             <div class="product-info">
-                <h1>Caderno de Esboços Artístico<br>Liberte sua Expressão Criativa</h1>
-                <p class="description">Desenvolvido artesanalmente com páginas kraft de alta gramatura, este caderno é perfeito para ilustrações, estudos de anatomia, retratos e experimentações com grafite, nanquim ou aquarela leve. Um espaço seguro para registrar sua evolução e explorar sua identidade visual.</p>
-                <div class="price">R$ 149,90</div>
+                <h1>Crie Suas Próprias Memórias: Kit Boneca de Pano Faça Você Mesmo</h1>
+                <p class="description">E se o próximo brinquedo do seu pequeno fosse feito por você? Ou melhor: costurado junto com ele? Nosso Kit "Faça em Casa" nasceu para resgatar o valor do artesanato afetivo e proporcionar momentos inesquecíveis. Nós preparamos tudo, mas a magia final acontece nas suas mãos.Não precisa ser uma costureira profissional! O kit foi desenhado com um molde simples e intuitivo, perfeito para quem quer iniciar no artesanato, desacelerar da rotina ou criar um presente único e cheio de significado. Sinta o orgulho e a terapia que é ver uma boneca nascer ponto a ponto através do seu carinho.Costure amor, monte memórias.</p>
+               
 
                 <div class="meta-row">
                     <div class="quantity">
-                        <button onclick="alterarQtd(-1)" aria-label="Diminuir quantidade">-</button>
-                        <input type="text" id="qtd" value="1" readonly aria-label="Quantidade do produto">
-                        <button onclick="alterarQtd(1)" aria-label="Aumentar quantidade">+</button>
+                        <button onclick="alterarQtd(-1)">-</button>
+                        <input type="text" id="qtd" value="1" readonly>
+                        <button onclick="alterarQtd(1)">+</button>
                     </div>
                     <div class="rating">
-                        <span class="stars" aria-hidden="true">★★★★★</span>
-                        <span>4,8 — 125 avaliações</span>
+                        <span class="stars">★★★★★</span>
+                        <span>4,9 — 36 avaliações</span>
                     </div>
                 </div>
 
+                
                 <div class="buy-buttons">
-                    <a href="#" class="btn btn-cart">Adicionar ao Carrinho</a>
-                    <a href="#" class="btn btn-buy">Comprar Agora</a>
+                    <a href="https://wa.me/5511960605992?text=Ol%C3%A1!%0AQuero%20informa%C3%A7%C3%B5es%20sobre%20os%20Kit." target="_blank" class="btn btn-buy">Enviar Mensagem</a>
                 </div>
 
-                <!-- ABAS -->
-                <div class="tabs" role="tablist">
-                    <button class="tab-item active" role="tab" aria-selected="true" aria-controls="tab-detalhes" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
-                    <button class="tab-item" role="tab" aria-selected="false" aria-controls="tab-beneficios" onclick="abrirAba(event, 'tab-beneficios')">Benefícios</button>
-                    <button class="tab-item" role="tab" aria-selected="false" aria-controls="tab-avaliacoes" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
+                <div class="tabs">
+                    <button class="tab-item active" onclick="abrirAba(event, 'tab-detalhes')">Detalhes</button>
+                    
+                    <button class="tab-item" onclick="abrirAba(event, 'tab-avaliacoes')">Avaliações</button>
                 </div>
 
-                <!-- CONTEÚDO: Detalhes -->
-                <div id="tab-detalhes" class="tab-content active" role="tabpanel">
-                    <p>O Caderno de Esboços Artístico da co-coleção Paula Evelise conta com capa dura resistente, 120 páginas em papel kraft de 120g/m² e formato ideal de 21 × 28 cm. Sua textura levemente rugosa oferece a aderência perfeita para técnicas secas e úmidas controladas. Acompanha fita marcadora de páginas e elástico de fechamento em tom coordenado.</p>
+                <div id="tab-detalhes" class="tab-content active">
+                    <ul><p><li>Tecidos Cortados: Tecidos antialérgicos e fáceis de manusear para o corpinho e roupinha.</li>
+
+                    <li>Enchimento Macio: Fibra siliconada de alta qualidade na quantidade exata.</li>
+
+                    <li>Fios e Detalhes: Linhas para o rostinho bordado e elementos do cabelo.</li>
+
+                    <li>Passo a Passo Ilustrado: Um guia super simples e prático para te orientar do início ao fim do projeto.</p></ul></li>
                 </div>
 
-                <!-- CONTEÚDO: Benefícios -->
-                <div id="tab-beneficios" class="tab-content" role="tabpanel">
-                    <ul class="benefits-list">
-                        <li><span class="benefit-icon">✏️</span> <span><strong>Estímulo Criativo</strong> — O fundo kraft quebra o bloqueio da tela branca, convidando ao traço livre e espontâneo.</span></li>
-                        <li><span class="benefit-icon">🧘</span> <span><strong>Mindfulness Ativo</strong> — Focar no processo manual do desenho ajuda a desacelerar a mente e reduz os níveis de estresse diários.</span></li>
-                        <li><span class="benefit-icon">🎨</span> <span><strong>Evolução Técnica</strong> — O hábito de manter um caderno físico documenta seu progresso em proporção, luz e sombra de forma tangível.</span></li>
-                        <li><span class="benefit-icon">🌿</span> <span><strong>Produção Consciente</strong> — Feito de forma artesanal com materiais selecionados, unindo durabilidade e respeito ao processo artístico.</span></li>
-                    </ul>
-                </div>
+            
 
-                <!-- CONTEÚDO: Avaliações -->
-                <div id="tab-avaliacoes" class="tab-content" role="tabpanel">
+                <div id="tab-avaliacoes" class="tab-content">
                     <div class="reviews-summary">
                         <div class="reviews-score">
-                            <div class="big-score">4,8</div>
-                            <div class="big-stars" aria-hidden="true">★★★★★</div>
-                            <small>125 avaliações</small>
+                            <div class="big-score">4,9</div>
+                            <div class="big-stars">★★★★★</div>
+                            <small>142 avaliações</small>
                         </div>
                         <div class="reviews-bars">
-                            <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:83%"></div></div><span>104</span></div>
-                            <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><span>14</span></div>
-                            <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:4%"></div></div><span>5</span></div>
-                            <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span>2</span></div>
+                            <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span>25</span></div>
+                            <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><span>10</span></div>
+                            <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span>1</span></div>
+                            <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div>
                             <div class="bar-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div>
                         </div>
                     </div>
@@ -652,26 +674,38 @@
                     <div class="review-list">
                         <div class="review-card">
                             <div class="review-header">
-                                <div class="review-avatar">MP</div>
+                                <div class="review-avatar">LC</div>
                                 <div class="review-meta">
-                                    <strong>Mariana P.</strong>
-                                    <span class="review-stars" aria-hidden="true">★★★★★</span>
+                                    <strong>Letícia Costa</strong>
+                                    <span class="review-stars">★★★★★</span>
                                 </div>
                                 <span class="review-date">há 2 dias</span>
                             </div>
-                            <p class="review-text">O papel é incrível, o grafite desliza muito bem e a textura aceita camadas sem agredir a folha. Vale muito a pena para os estudos diários.</p>
+                            <p class="review-text">Comprei o kit para fazer junto com a minha filha de 8 anos no fim de semana e foi uma experiência maravilhosa! O manual é super explicativo e os tecidos já vêm cortados certinho, o que facilita muito. Ela ficou super orgulhosa dizendo para todo mundo que ajudou a fazer a própria boneca. Virou uma memória inesquecível para nós duas.</p>
                         </div>
 
                         <div class="review-card">
                             <div class="review-header">
-                                <div class="review-avatar">DS</div>
+                                <div class="review-avatar">TG</div>
                                 <div class="review-meta">
-                                    <strong>Diego S.</strong>
-                                    <span class="review-stars" aria-hidden="true">★★★★★</span>
+                                    <strong>Thiago G.</strong>
+                                    <span class="review-stars">★★★★★</span>
                                 </div>
-                                <span class="review-date">há 1 semana</span>
+                                <span class="review-date">há 5 dias</span>
                             </div>
-                            <p class="review-text">Uso nas minhas sessões de desenho de observação e arteterapia. O tom kraft dá um contraste lindo com lápis integral e caneta branca.</p>
+                            <p class="review-text">Eu não sabia quase nada de costura, só dar uns pontinhos básicos à mão, e consegui fazer a boneca tranquilamente! O molde é simples e muito intuitivo. Foi uma verdadeira terapia para os meus dias estressantes. O material é de excelente qualidade e sobrou bastante linha. Já quero comprar outro kit para dar de presente!</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">MA</div>
+                                <div class="review-meta">
+                                    <strong>Mariana Alencar</strong>
+                                    <span class="review-stars">★★★★☆</span>
+                                </div>
+                                <span class="review-date">há 2 semanas</span>
+                            </div>
+                            <p class="review-text">Amei o capricho desse kit. Vem tudo incrivelmente organizado dentro da caixinha, com a quantidade exata de enchimento e materiais de primeira. O design simples da boneca é lindo e o resultado final fica uma fofura. É uma excelente opção de presente para quem gosta de trabalhos manuais.</p>
                         </div>
                     </div>
                 </div>
@@ -679,65 +713,71 @@
             </div>
         </div>
 
-        <section class="related-section">
+        <div class="related-section">
             <h2>Você também pode gostar</h2>
             <div class="related-grid">
                 <div class="related-card">
-                    <a href="produto3.html"><img src="img/diario.jpg" alt="Diário Autoconhecimento Criativo"></a>
-                    <div class="title">Diário de Autoconhecimento</div>
-                    <div class="price">R$ 109,90</div>
-                    <a href="produto3.html" class="btn-add">Ver Detalhes</a>
+                    <a href="produto3.html"><img src="./imagens_index/bolsa.jpg" alt="Bolsas personalizadas"></a>
+                    <div class="title">Bolsas personalizadas</div>
+                    
+                    <a href="produto3.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto2.html"><img src="img/Kit.jpg" alt="Kit Essencial de Arteterapia"></a>
-                    <div class="title">Kit Essencial de Arteterapia</div>
-                    <div class="price">R$ 149,90</div>
-                    <a href="produto2.html" class="btn-add">Ver Detalhes</a>
+                    <a href="produto4.html"><img src="./imagens_index/boneca.jpg" alt="Fantoches simples"></a>
+                    <div class="title">Fantoches simples</div>
+                    
+                    <a href="produto4.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto4.html"><img src="img/Kit2.jpg" alt="Estojo de Guache Artístico"></a>
-                    <div class="title">Estojo de Guache Artístico</div>
-                    <div class="price">R$ 169,90</div>
-                    <a href="produto4.html" class="btn-add">Ver Detalhes</a>
+                    <a href="produto2.html"><img src="./imagens_index/banner dela.jpg" alt="Banners personalizados"></a>
+                    <div class="title">Banners personalizados</div>
+                    
+                    <a href="produto2.html" class="btn-add">Comprar</a>
                 </div>
                 <div class="related-card">
-                    <a href="produto5.html"><img src="img/caixinha.jpg" alt="Bloco de Notas Pautado Meraki"></a>
-                    <div class="title">Bloco de Notas Pautado</div>
-                    <div class="price">R$ 99,90</div>
-                    <a href="produto5.html" class="btn-add">Ver Detalhes</a>
+                    <a href="produto5.html"><img src="./imagens_index/religiosas.jpg" alt="Fantoches religiosos"></a>
+                    <div class="title">Fantoches religiosos</div>
+                  
+                    <a href="produto5.html" class="btn-add">Comprar</a>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-socials">
-            <a href="#" aria-label="Instagram"><img src="img/insta.png" alt="Instagram"></a>
-            <a href="#" aria-label="WhatsApp"><img src="img/whatts.png" alt="WhatsApp"></a>
-            <a href="#" aria-label="LinkedIn"><img src="img/li.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/paulaevelise72?igsh=MTg4MHEwcnJuc3Zzeg==" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="https://wa.me/5511960605992?text=Ol%C3%A1!%0AQuero%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos." target="_blank"><img src="img/whatts.png" alt="WhatsApp"></a>
+            <a href="https://m.youtube.com/channel/UCNgQJVknTLY3jmE4NBJoQzw" target="_blank"><img src="img/li.png" alt="YouTube"></a>
         </div>
         <p class="copyright">&copy; 2026 Meraki. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- VLibras Component Structure -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
         function alterarQtd(valor) {
-            const campo = document.getElementById('qtd');
-            let atual = parseInt(campo.value) || 1;
+            let campo = document.getElementById('qtd');
+            let atual = parseInt(campo.value);
             let novo = atual + valor;
             if (novo >= 1) campo.value = novo;
         }
 
         function abrirAba(event, idAba) {
-            document.querySelectorAll('.tab-item').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            });
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            
+            document.querySelectorAll('.tab-item').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
             event.currentTarget.classList.add('active');
-            event.currentTarget.setAttribute('aria-selected', 'true');
             document.getElementById(idAba).classList.add('active');
         }
     </script>
